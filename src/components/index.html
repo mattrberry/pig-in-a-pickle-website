@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pig in a Pickle BBQ</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="app">
+            <app-nav></app-nav>
+        </div>
+    </body>
+</html>
+
+<template id="nav">
+    <ol>
+        <li v-for="page in pages">
+            <a v-bind:href="page.url">{{page.name}}</a>
+        </li>
+    </ol>
+</template>
+
+<script src="components.js"></script>
+<script src="app.js"></script>
