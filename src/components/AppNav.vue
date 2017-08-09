@@ -1,7 +1,7 @@
 <template id="nav">
   <div id="nav">
-    <img src="../assets/pig.png" height="30px" />
-    <a v-for="page in pages" v-bind:href="page.url">{{page.name}}</a>
+    <h3>Pig in a Pickle</h3>
+    <router-link v-for="page in pages" v-bind:to="page.url">{{page.name}}</router-link>
   </div>
 </template>
 
@@ -27,18 +27,19 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
+  height: 50px;
 
+  vertical-align: middle;
   font-size: 24px;
 }
-#nav img {
-  float: left;
-  display: block;
-}
-#nav a {
+#nav a, #nav h3 {
   float: left;
   padding: 8px;
   text-decoration: none;
   color: #FFF;
+}
+#nav a.router-link-exact-active {
+    color: #000;
 }
 #nav a:hover {
   animation: hover-on .5s forwards;
