@@ -1,6 +1,5 @@
 <template>
   <div class="about">
-    <Nav></Nav>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -15,17 +14,12 @@
 </template>
 
 <script>
-import Nav from './Nav.vue'
-
 export default {
   name: 'about',
   data () {
     return {
       msg: 'Welcome to Your About Page'
     }
-  },
-  components: {
-    Nav
   }
 }
 </script>
