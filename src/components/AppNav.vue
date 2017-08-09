@@ -1,7 +1,7 @@
 <template id="nav">
   <div id="nav">
-    <h3>Pig in a Pickle</h3>
-    <router-link v-for="page in pages" v-bind:to="page.url">{{page.name}}</router-link>
+    <router-link id="nav-home" to="/">Pig in a Pickle</router-link>
+    <p v-for="page in pages"><router-link v-bind:to="page.url">{{page.name}}</router-link></p>
   </div>
 </template>
 
@@ -22,38 +22,52 @@ export default {
 <style>
 #nav {
   background: #964F4C;
-  overflow: hidden;
+  //overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 50px;
+  text-align: center;
 
-  vertical-align: middle;
   font-size: 24px;
 }
-#nav a, #nav h3 {
-  float: left;
-  padding: 8px;
+#nav p, #nav-home {
+  //float: left;
+  margin: 0;
+  padding: 2px 4px 2px 4px;
+  text-decoration: none;
+  color: #FFF;
+
+  vertical-align: middle;
+  display: inline-block;
+}
+#nav-home {
+  font-size: 36px;
+}
+#nav a {
   text-decoration: none;
   color: #FFF;
 }
-#nav a.router-link-exact-active {
-    color: #000;
+#nav a:not(#nav-home) {
+  opacity: .5;
 }
-#nav a:hover {
-  animation: hover-on .5s forwards;
+#nav a.router-link-exact-active:not(#nav-home) {
+    opacity: 1;
 }
-#nav a:not(:hover) {
-  animation: hover-off .5s forwards;
+#nav a:not(#nav-home):not(.router-link-exact-active):hover {
+  animation: hover-on .3s forwards;
+}
+#nav a:not(#nav-home):not(.router-link-exact-active):not(:hover) {
+  animation: hover-off .3s forwards;
 }
 
 @keyframes hover-on {
-  from {background: #964F4C;}
-  to   {background: #DECDBE;}
+  from {opacity: .5;}
+  to   {opacity: 1;}
 }
 @keyframes hover-off {
-  from {background: #DECDBE;}
-  to   {background: #964F4C;}
+  from {opacity: 1;}
+  to   {opacity: .5;}
 }
 </style>
