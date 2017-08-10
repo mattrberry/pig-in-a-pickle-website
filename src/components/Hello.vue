@@ -1,22 +1,12 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <h1>Welcome to Pig in a Pickle</h1>
+    <h3>Bringing you the best in Bay Area Bar-B-Q!</h3>
+    <p>We <span class="red">pride ourselves</span> on using only fresh, local ingredients and the finest brisket, pork, ribs and chicken available. Everything is made <span class="red">from scratch</span> including the buns, ribs, pickles, sausage and sauces.</p>
+    <span class="red center">We have your taste buds covered.</span>
+    <p>Each sauce is created to represent a region from the South: Memphis Style, Mustard Sauce from South Carolina, Dip from North Carolina, Alabama White Sauce or Commitment (our habanero hot sauce).</p>
+    <span class="red center">What makes us different you ask?</span>
+    <p>We don’t claim to be ‘just like’, any specific part of the South! But no matter where you are from you will appreciate our attention to detail. We cook what we like to eat so come on in and create your own favorite combination of meat, sides and sauces!</p>
   </div>
 </template>
 
@@ -31,23 +21,8 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+h1, h2, h3, h4, h5, h6, p, a, span {
+  margin: 0;
 }
 </style>
