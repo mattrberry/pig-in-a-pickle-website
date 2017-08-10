@@ -12,16 +12,11 @@
 
 <script>
 export default {
-  name: 'hello',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+  name: 'hello'
 }
 </script>
 
-<style scoped>
+<style>
 h1, h2, h3, h4, h5, h6, p, a, span {
   margin: 0;
 }

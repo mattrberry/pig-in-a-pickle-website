@@ -1,46 +1,27 @@
 <template>
   <div class="about">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
+    <h3><span class="red center">You only need 2 things to make great BBQ: Time and the right wood.</span></h3>
+    <img src="../assets/damon.jpg"></img>
+    <p>Pig in a Pickle’s Damon Stainbrook worked in the restaurant business as a chef since the early 90’s when he worked for Executive Chef Bradley Ogden at Lark Creek Inn. Since then, he has worked in a variety of capacities at high end restaurants in San Francisco including as Poissonier at Heights Restaurant, Grill Cook at One Market Restaurant, Lead Line Cook at American Bistro, and finally as Sous Chef under Thomas Keller at French Laundry.</p>
+    <p>What makes our restaurant different is the amount, consideration and attention to each part of what goes into a great smoked meat or recipe. We pride ourselves on using only fresh, local ingredients and the finest brisket, pork, ribs and chicken available. Everything is made from scratch including the buns, rubs, pickles, sausage and sauces. Each sauce is created to represent a region from the South: Memphis Style, Mustard Sauce from South Carolina, Dip from North Carolina, Alabama White Sauce or our very own hot sauce.</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'about',
-  data () {
-    return {
-      msg: 'Welcome to Your About Page'
-    }
-  }
+  name: 'about'
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
+<style>
+@media (min-width: 765px) {
+  img {
+    float: left;
+    margin: 10px;
+  }
 }
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
+img {
+  width: 90%;
+  max-width: 300px;
 }
 </style>
