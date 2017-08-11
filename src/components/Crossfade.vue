@@ -12,7 +12,7 @@ export default {
   name: 'crossfade',
   data: function () {
     return {
-      numImages: 9
+      numImages: 7
     }
   }
 }
@@ -20,7 +20,7 @@ export default {
 
 <style>
 .images > figure {
-  animation: imageAnimation 30s linear infinite 0s;
+  animation: imageAnimation 42s linear infinite 0s;
   backface-visibility: hidden;
   background-size: cover;
   background-position: center center;
@@ -60,14 +60,6 @@ export default {
 .images > figure:nth-child(7) {
   animation-delay: 36s;
   background-image: url('../assets/bg-7.png');
-}
-.images > figure:nth-child(8) {
-  animation-delay: 42s;
-  background-image: url('../assets/bg-8.png');
-}
-.images > figure:nth-child(9) {
-  animation-delay: 48s;
-  background-image: url('../assets/bg-9.png');
 }
 @keyframes imageAnimation {  
   0% {

@@ -7,6 +7,9 @@
     <p>Each sauce is created to represent a region from the South: Memphis Style, Mustard Sauce from South Carolina, Dip from North Carolina, Alabama White Sauce or Commitment (our habanero hot sauce).</p>
     <span class="red center">What makes us different you ask?</span>
     <p>We don’t claim to be ‘just like’, any specific part of the South! But no matter where you are from you will appreciate our attention to detail. We cook what we like to eat so come on in and create your own favorite combination of meat, sides and sauces!</p>
+    <video controls>
+      <source src="../assets/intro.webm" type="video/webm">
+    </video>
   </div>
 </template>
 
@@ -19,5 +22,9 @@ export default {
 <style>
 h1, h2, h3, h4, h5, h6, p, a, span {
   margin: 0;
+}
+video {
+  width: 90%;
+  max-width: 500px;
 }
 </style>

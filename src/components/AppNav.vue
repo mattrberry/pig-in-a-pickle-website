@@ -1,6 +1,7 @@
 <template id="nav">
   <div id="nav">
-    <router-link id="nav-home" to="/">Pig in a Pickle</router-link>
+    <router-link id="nav-home" to="/">Pig in a Pickle<img src="../assets/pig.png"></router-link>
+    <!--<router-link id="nav-home-img" to="/"><img src="../assets/pig.png"></router-link>-->
     <p v-for="page in pages"><router-link v-bind:to="page.url">{{page.name}}</router-link></p>
   </div>
 </template>
@@ -12,7 +13,8 @@ export default {
     return {
       pages: [
       { url: '/', name: 'Home' },
-      { url: '/about', name: 'About' }
+      { url: '/about', name: 'About' },
+      { url: '/menu', name: 'Menu' }
       ]
     }
   }
@@ -44,6 +46,12 @@ export default {
 }
 #nav-home {
   font-size: 36px;
+}
+#nav-home img {
+  display: none;
+}
+#nav-home-img img {
+  height: 80%;
 }
 #nav a {
   text-decoration: none;
