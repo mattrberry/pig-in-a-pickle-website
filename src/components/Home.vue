@@ -9,6 +9,8 @@
     <p>We don’t claim to be ‘just like’, any specific part of the South! But no matter where you are from you will appreciate our attention to detail. We cook what we like to eat so come on in and create your own favorite combination of meat, sides and sauces!</p>
     <video controls>
       <source src="../assets/intro.webm" type="video/webm">
+      <source src="../assets/intro.mp4" type="video/mp4">
+      Unable to play video on your browser.
     </video>
   </div>
 </template>
