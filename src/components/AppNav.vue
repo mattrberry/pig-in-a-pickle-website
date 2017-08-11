@@ -1,7 +1,6 @@
 <template id="nav">
   <div id="nav">
-    <router-link id="nav-home" to="/">Pig in a Pickle<img src="../assets/pig.png"></router-link>
-    <!--<router-link id="nav-home-img" to="/"><img src="../assets/pig.png"></router-link>-->
+    <router-link id="nav-home" to="/">Pig in a Pickle</router-link>
     <p v-for="page in pages"><router-link v-bind:to="page.url">{{page.name}}</router-link></p>
   </div>
 </template>
@@ -21,7 +20,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #nav {
   background: #964F4C;
   //overflow: hidden;
@@ -47,12 +46,6 @@ export default {
 #nav-home {
   font-size: 36px;
 }
-#nav-home img {
-  display: none;
-}
-#nav-home-img img {
-  height: 80%;
-}
 #nav a {
   text-decoration: none;
   color: #FFF;
@@ -61,7 +54,7 @@ export default {
   opacity: .5;
 }
 #nav a.router-link-exact-active:not(#nav-home) {
-    opacity: 1;
+  opacity: 1;
 }
 #nav a:not(#nav-home):not(.router-link-exact-active):hover {
   animation: hover-on .3s forwards;
