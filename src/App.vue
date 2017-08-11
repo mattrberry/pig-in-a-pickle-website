@@ -48,8 +48,8 @@ h1 {
 h3 {
   font-size: 26px;
 }
-p, span {
-  font-size: 24px;
+p {
+  font-size: 26px;
 }
 
 #outer-container {
