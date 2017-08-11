@@ -13,11 +13,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @media (min-width: 765px) {
   img {
     float: left;
     margin: 10px;
+    margin-bottom: 50px;
   }
 }
 img {
