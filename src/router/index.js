@@ -24,5 +24,8 @@ export default new Router({
       name: 'Menu',
       component: Menu
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
