@@ -29,36 +29,18 @@ export default {
 </script>
 
 <style>
-/* For the "inset" look only */
 html {
-  overflow: auto;
-}
-body {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  bottom: 5px;
-  right: 5px;
   overflow-y: scroll;
-  overflow-x: hidden;
 }
 
-/* Let's get this party started */
 ::-webkit-scrollbar {
   width: 8px;
 }
-
-::-webkit-scrollbar-button {
-  height: 58px;
-}
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   background: #964F4C;
 }
-
 
 #app {
   font-family: 'Rancho', cursive;
