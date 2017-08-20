@@ -83,7 +83,7 @@ export default {
 
 #darkener {
   background: black;
-  opacity: .7;
+  opacity: .6;
   position: fixed;
   width: 100vw;
   height: 100vh;
