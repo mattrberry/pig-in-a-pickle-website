@@ -32,6 +32,8 @@ export default {
   text-align: center;
 
   font-size: 24px;
+
+  z-index: 1;
 }
 #nav p, #nav-home {
   //float: left;
