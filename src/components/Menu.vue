@@ -1,7 +1,6 @@
 <template>
   <div class="menu">
     <h3><span class="red">All our meats are Hormone & Antibiotic Free, Humanely Raised and Locally Sourced when possible, and are smoked with California White Oak.</span></h3>
-
     <div class="blocks">
       <div v-for="block in menu_blocks" v-bind:id="block.name" class="block tab">
         <input v-bind:id="classAddTab(block.name)" type="checkbox" name="tabs" class="block-checkbox">
@@ -34,7 +33,7 @@ export default {
             {
               name: 'Baby Back Ribs',
               details: 'Dry Rubbed and Lightly Smoked',
-              price: '$8 3 ribs, $16 6 ribs, $30 12 ribs'
+              price: '$9 3 ribs, $18 6 ribs, $30 12 ribs'
             },
             {
               name: 'Smoked Chicken',
@@ -44,7 +43,7 @@ export default {
             {
               name: 'Beef Brisket',
               details: 'Wet Rubbed & Smoked for 18 hours',
-              price: '$7 1/4lb, $13 1/2lb, $26 1lb'
+              price: '$8 1/4lb, $15 1/2lb, $28 1lb'
             },
             {
               name: 'Pulled Pork',
@@ -53,7 +52,7 @@ export default {
             },
             {
               name: 'House Made Hot Link',
-              price: '$6 each (approx 1/3lb)'
+              price: '$7 each (approx 1/3lb)'
             }
           ]
         },
@@ -62,20 +61,53 @@ export default {
           items: [
             {
               name: 'Potato Salad',
-              price: '$3, $6, $9'
+              price: '$3.50 8oz, $7 16oz, $11 32oz'
             },
             {
               name: 'Coleslaw',
-              price: '$3, $6, $9'
+              price: '$3 8oz, $6 16oz, $9 32oz'
             },
             {
               name: 'Ranch Style Beans',
-              price: '$3, $6, $9'
+              price: '$3.50 8oz, $7 16oz, $11 32oz'
             },
             {
               name: 'Beef Brisket Chili',
               details: '~ when available ~',
-              price: '$4, $8, $12'
+              price: '$5 8oz, $9 16oz, $16 32oz'
+            },
+            {
+              name: 'Collard Greens w/ Ham Hock',
+              price: '$4 8oz, $8 16oz, $14 32oz'
+            },
+            {
+              name: 'Vegetarian Collard Greens',
+              price: '$4 8oz, $8 16oz, $14 32oz'
+            },
+            {
+              name: 'Cornbread',
+              price: '$3'
+            },
+            {
+              name: 'Parker House Rolls',
+              price: '$4 for 4 small rolls'
+            },
+            {
+              name: 'Kettle Tallow Chips',
+              price: '$2 side, $4 bag'
+            },
+            {
+              name: 'Dill Pickle',
+              price: '$2'
+            },
+            {
+              name: 'B & B Pickles',
+              price: '$3 side, $7 jar'
+            },
+            {
+              name: 'To Go Sauces',
+              details: '2oz per 1/4lb of Meat is Included',
+              price: '$2 4oz, $7 jar'
             }
           ]
         },
@@ -84,21 +116,21 @@ export default {
           items: [
             {
               name: 'Brisket Sandwitch',
-              price: '$13'
+              price: '$14'
             },
             {
               name: 'Pulled Pork Sandwitch',
-              price: '$11'
+              price: '$12'
             },
             {
               name: 'Chicken Salad',
               details: 'Pulled Chicken, Parsley & Celery Tossed in Alabama White Sauce With Caramelized Onions & Romaine Hearts',
-              price: '$11'
+              price: '$12'
             },
             {
               name: 'Hot Link Sandwitch',
               details: 'With Roasted Sweet Peppers & Caramelized Onions',
-              price: '$10'
+              price: '$11'
             },
             {
               name: 'KIDS Beef Hot Dog',
@@ -115,7 +147,7 @@ export default {
             {
               name: 'KIDS Pulled Chicken Sandwitch',
               details: '(cold)',
-              price: '6'
+              price: '$6'
             }
           ]
         },
@@ -136,7 +168,7 @@ export default {
             },
             {
               name: 'with Beef Brisket',
-              price: '$15'
+              price: '$16'
             }
           ]
         },
@@ -146,12 +178,12 @@ export default {
             {
               name: '2 Meats & 3 Sides',
               details: '1/2lb of Meat',
-              price: '$18'
+              price: '$19'
             },
             {
               name: '3 Meats & 3 Sides',
               details: '3/4lb of Meat',
-              price: '$24'
+              price: '$25'
             },
             {
               name: '3 Meats & 4 Sides',
@@ -196,12 +228,17 @@ export default {
             {
               name: 'Strawberry Lemonade',
               details: '$1 Refills',
-              price: '$3.5'
+              price: '$3.50'
             },
             {
               name: 'Sprechers Root Beer',
               details: 'Bottle',
               price: '$4'
+            },
+            {
+              name: 'Marin Kombucha',
+              details: 'Bottle',
+              price: '$5'
             }
           ]
         }
