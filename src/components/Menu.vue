@@ -1,6 +1,6 @@
 <template>
   <div class="menu">
-    <h1><span class="red">All our meats are Hormone & Antibiotic Free, Humanely Raised and Locally Sourced when possible, and are smoked with California White Oak.</span></h1>
+    <h3><span class="red">All our meats are Hormone & Antibiotic Free, Humanely Raised and Locally Sourced when possible, and are smoked with California White Oak.</span></h3>
 
     <div class="blocks">
       <div v-for="block in menu_blocks" v-bind:id="block.name" class="block tab">
@@ -14,18 +14,6 @@
         </div>
       </div>
     </div>
-
-    <!--<div class="blocks">
-      <div v-for="block in menu_blocks" v-bind:id="block.name" class="block">
-        <h3>{{block.name}}</h3>
-        <div class="item" v-for="item in block.items">
-          <p class="item-name">{{item.name}}</p>
-          <p class="item-details">{{item.details}}</p>
-          <p class="item-price">{{item.price}}</p>
-          <br>
-        </div>
-      </div>
-    </div>-->
   </div>
 </template>
 
@@ -46,7 +34,7 @@ export default {
             {
               name: 'Baby Back Ribs',
               details: 'Dry Rubbed and Lightly Smoked',
-              price: '$7 1/4lb, $13 1/2lb, $26 1lb'
+              price: '$8 3 ribs, $16 6 ribs, $30 12 ribs'
             },
             {
               name: 'Smoked Chicken',
@@ -56,7 +44,7 @@ export default {
             {
               name: 'Beef Brisket',
               details: 'Wet Rubbed & Smoked for 18 hours',
-              price: '$7 , $13 , $26 1lb'
+              price: '$7 1/4lb, $13 1/2lb, $26 1lb'
             },
             {
               name: 'Pulled Pork',
@@ -93,11 +81,130 @@ export default {
         },
         {
           name: 'SANDWITCHES',
-          items: ['Brisket', 'Pulled Pork', 'Chicken Salad', 'link', 'kids dog', 'kids brisket', 'kids pork', 'kids chicken'] },
-      { name: 'salads', items: ['mixed greens', '+chicken', '+pork', '+brisket'] },
-      { name: 'plates', items: [] },
-      { name: 'dessets', items: [] },
-      { name: 'drinks', items: [] }
+          items: [
+            {
+              name: 'Brisket Sandwitch',
+              price: '$13'
+            },
+            {
+              name: 'Pulled Pork Sandwitch',
+              price: '$11'
+            },
+            {
+              name: 'Chicken Salad',
+              details: 'Pulled Chicken, Parsley & Celery Tossed in Alabama White Sauce With Caramelized Onions & Romaine Hearts',
+              price: '$11'
+            },
+            {
+              name: 'Hot Link Sandwitch',
+              details: 'With Roasted Sweet Peppers & Caramelized Onions',
+              price: '$10'
+            },
+            {
+              name: 'KIDS Beef Hot Dog',
+              price: '$6'
+            },
+            {
+              name: 'KIDS Brisket Sandwitch',
+              price: '$7'
+            },
+            {
+              name: 'KIDS Pork Sandwitch',
+              price: '$6'
+            },
+            {
+              name: 'KIDS Pulled Chicken Sandwitch',
+              details: '(cold)',
+              price: '6'
+            }
+          ]
+        },
+        {
+          name: 'SALADS',
+          items: [
+            {
+              name: 'Seasonal Mixed Greens',
+              price: '$9'
+            },
+            {
+              name: 'with Pulled Chicken',
+              price: '$12'
+            },
+            {
+              name: 'with Pulled Pork',
+              price: '$14'
+            },
+            {
+              name: 'with Beef Brisket',
+              price: '$15'
+            }
+          ]
+        },
+        {
+          name: 'PLATES & PLATTERS',
+          items: [
+            {
+              name: '2 Meats & 3 Sides',
+              details: '1/2lb of Meat',
+              price: '$18'
+            },
+            {
+              name: '3 Meats & 3 Sides',
+              details: '3/4lb of Meat',
+              price: '$24'
+            },
+            {
+              name: '3 Meats & 4 Sides',
+              details: '1.5lb of Meat',
+              price: '$65'
+            }
+          ]
+        },
+        {
+          name: 'DESSERTS',
+          items: [
+            {
+              name: 'Scoop of Three Twins Vanilla',
+              details: 'with House Made Caramel Sauce',
+              price: '$3'
+            },
+            {
+              name: 'Seasonal Selections',
+              details: 'add $1 for Three Twins Vanilla Ice Cream on Top',
+              price: '$6'
+            }
+          ]
+        },
+        {
+          name: 'DRINKS',
+          items: [
+            {
+              name: 'Cola / Diet Cola / Lemon-Lime / Ginger Ale / Ice Tea / Sweet Tea / Arnold Palmer',
+              details: 'Free Refills',
+              price: '$3'
+            },
+            {
+              name: 'Coffee / Decaf',
+              details: '$1 Refills',
+              price: '$3'
+            },
+            {
+              name: 'Lemonade',
+              details: '$1 Refills',
+              price: '$3'
+            },
+            {
+              name: 'Strawberry Lemonade',
+              details: '$1 Refills',
+              price: '$3.5'
+            },
+            {
+              name: 'Sprechers Root Beer',
+              details: 'Bottle',
+              price: '$4'
+            }
+          ]
+        }
       ]
     }
   }
@@ -105,10 +212,11 @@ export default {
 </script>
 
 <style scoped>
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .block {
     float: left;
     padding: 8px;
+    width: 30%;
   }
   .block-checkbox {
     display: none;
@@ -119,7 +227,7 @@ export default {
   }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 799px) {
   .block {
     padding: 0px;
   }
