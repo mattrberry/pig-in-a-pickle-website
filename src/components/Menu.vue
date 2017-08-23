@@ -1,18 +1,6 @@
 <template>
   <div class="menu">
     <h3><span class="red">All our meats are Hormone & Antibiotic Free, Humanely Raised and Locally Sourced when possible, and are smoked with California White Oak.</span></h3>
-    <!-- <div class="blocks">
-      <div v-for="block in menu_blocks" v-bind:id="block.name" class="block tab">
-        <input v-bind:id="classAddTab(block.name)" type="checkbox" name="tabs" class="block-checkbox">
-        <label v-bind:for="classAddTab(block.name)" class="block-name">{{block.name}}</label>
-        <div class="tab-content item" v-for="item in block.items">
-          <p class="item-name">{{item.name}}</p>
-          <p class="item-details">{{item.details}}</p>
-          <p class="item-price">{{item.price}}</p>
-          <br>
-        </div>
-      </div>
-    </div> -->
     <div class="blocks">
       <div v-for="block in menu_blocks" v-bind:id="block.name" class="block tab">
         <input v-bind:id="classAddTab(block.name)" type="checkbox" name="tabs" class="block-checkbox">
@@ -20,12 +8,7 @@
         <div class="tab-content item" v-for="item in block.items">
           <h4 class="item-name">{{item.name}}<strong class="price" v-if="objSize(item.prices) == 1">{{item.prices[0].value}}</strong></h4>
           <p class="item-details">{{item.details}}</p>
-          <!-- <div v-for="price in item.prices">
-            <p class="item-prices">{{price.label}}<strong class="price">{{price.value}}</strong></p>
-            <hr/>
-          </div> -->
           <p class="item-prices" v-if="objSize(item.prices) > 1" v-for="price in item.prices">{{price.label}}<strong class="price">{{price.value}}</strong></p>
-          <!-- <br> -->
         </div>
       </div>
     </div>
@@ -43,6 +26,7 @@ export default {
       try {
         return Object.keys(obj).length
       } catch (e) {
+        console.log('Failed. Object received: ' + obj)
         return 0
       }
     }
@@ -137,21 +121,101 @@ export default {
           ]
         },
         {
+          name: 'Sandwiches',
+          items: [
+            {
+              name: 'Beef Brisket Sandwich',
+              prices: [
+                {
+                  label: 'Per Sandwich',
+                  value: '14'
+                }
+              ]
+            },
+            {
+              name: 'Pulled Pork Sandwich',
+              prices: [
+                {
+                  label: 'Per Sandwich',
+                  value: '12'
+                }
+              ]
+            },
+            {
+              name: 'Chicken Salad Sandwich',
+              details: 'Pulled Chicken, Parsley & Celery Tossed in Alabama White Sauce With Caramelized Onions & Romaine Hearts',
+              prices: [
+                {
+                  label: 'Per Sandwich',
+                  value: '12'
+                }
+              ]
+            },
+            {
+              name: 'Hot Link Sandwich',
+              details: 'With Roasted Sweet Peppers & Caramelized Onions',
+              prices: [
+                {
+                  label: 'Per Sandwich',
+                  value: '11'
+                }
+              ]
+            },
+            {
+              name: 'KIDS Beef Hot Dog',
+              prices: [
+                {
+                  label: 'Per Sandwich',
+                  value: '6'
+                }
+              ]
+            },
+            {
+              name: 'KIDS Brisket Sandwich',
+              prices: [
+                {
+                  label: 'Per Sandwich',
+                  value: '7'
+                }
+              ]
+            },
+            {
+              name: 'KIDS Pork Sandwich',
+              prices: [
+                {
+                  label: 'Per Sandwich',
+                  value: '6'
+                }
+              ]
+            },
+            {
+              name: 'KIDS Pulled Chicken Sandwich',
+              details: '(cold)',
+              prices: [
+                {
+                  label: 'Per Sandwich',
+                  value: '6'
+                }
+              ]
+            }
+          ]
+        },
+        {
           name: 'Sides',
           items: [
             {
               name: 'Potato Salad',
               prices: [
                 {
-                  label: '8oz',
+                  label: 'Small (8oz)',
                   value: '3.50'
                 },
                 {
-                  label: '16oz',
+                  label: 'Medium (16oz)',
                   value: '7'
                 },
                 {
-                  label: '32oz',
+                  label: 'Large (32oz)',
                   value: '11'
                 }
               ]
@@ -160,15 +224,15 @@ export default {
               name: 'Coleslaw',
               prices: [
                 {
-                  label: '8oz',
+                  label: 'Small (8oz)',
                   value: '3'
                 },
                 {
-                  label: '16oz',
+                  label: 'Medium (16oz)',
                   value: '6'
                 },
                 {
-                  label: '32oz',
+                  label: 'Large (32oz)',
                   value: '9'
                 }
               ]
@@ -177,15 +241,15 @@ export default {
               name: 'Ranch Style Beans',
               prices: [
                 {
-                  label: '8oz',
+                  label: 'Small (8oz)',
                   value: '3.50'
                 },
                 {
-                  label: '16oz',
+                  label: 'Medium (16oz)',
                   value: '7'
                 },
                 {
-                  label: '32oz',
+                  label: 'Large (32oz)',
                   value: '11'
                 }
               ]
@@ -195,15 +259,15 @@ export default {
               details: '~ when available',
               prices: [
                 {
-                  label: '8oz',
+                  label: 'Small (8oz)',
                   value: '5'
                 },
                 {
-                  label: '16oz',
+                  label: 'Medium (16oz)',
                   value: '9'
                 },
                 {
-                  label: '32oz',
+                  label: 'Large (32oz)',
                   value: '16'
                 }
               ]
@@ -212,15 +276,15 @@ export default {
               name: 'Collard Greens w/ Ham Hock',
               prices: [
                 {
-                  label: '8oz',
+                  label: 'Small (8oz)',
                   value: '4'
                 },
                 {
-                  label: '16oz',
+                  label: 'Medium (16oz)',
                   value: '8'
                 },
                 {
-                  label: '32oz',
+                  label: 'Large (32oz)',
                   value: '14'
                 }
               ]
@@ -229,15 +293,15 @@ export default {
               name: 'Vegetarian Collard Greens',
               prices: [
                 {
-                  label: '8oz',
+                  label: 'Small (8oz)',
                   value: '4'
                 },
                 {
-                  label: '16oz',
+                  label: 'Medium (16oz)',
                   value: '8'
                 },
                 {
-                  label: '32oz',
+                  label: 'Large (32oz)',
                   value: '14'
                 }
               ]
@@ -306,86 +370,6 @@ export default {
                 {
                   label: 'Jar',
                   value: '7'
-                }
-              ]
-            }
-          ]
-        },
-        {
-          name: 'Sandwitches',
-          items: [
-            {
-              name: 'Brisket Sandwitch',
-              prices: [
-                {
-                  label: 'Per Sandwitch',
-                  value: '14'
-                }
-              ]
-            },
-            {
-              name: 'Pulled Pork Sandwitch',
-              prices: [
-                {
-                  label: 'Per Sandwitch',
-                  value: '12'
-                }
-              ]
-            },
-            {
-              name: 'Chicken Salad',
-              details: 'Pulled Chicken, Parsley & Celery Tossed in Alabama White Sauce With Caramelized Onions & Romaine Hearts',
-              prices: [
-                {
-                  label: 'Per Sandwitch',
-                  value: '12'
-                }
-              ]
-            },
-            {
-              name: 'Hot Link Sandwitch',
-              details: 'With Roasted Sweet Peppers & Caramelized Onions',
-              prices: [
-                {
-                  label: 'Per Sandwitch',
-                  value: '11'
-                }
-              ]
-            },
-            {
-              name: 'KIDS Beef Hot Dog',
-              prices: [
-                {
-                  label: 'Per Sandwitch',
-                  value: '6'
-                }
-              ]
-            },
-            {
-              name: 'KIDS Brisket Sandwitch',
-              prices: [
-                {
-                  label: 'Per Sandwitch',
-                  value: '7'
-                }
-              ]
-            },
-            {
-              name: 'KIDS Pork Sandwitch',
-              prices: [
-                {
-                  label: 'Per Sandwitch',
-                  value: '6'
-                }
-              ]
-            },
-            {
-              name: 'KIDS Pulled Chicken Sandwitch',
-              details: '(cold)',
-              prices: [
-                {
-                  label: 'Per Sandwitch',
-                  value: '6'
                 }
               ]
             }
@@ -565,11 +549,41 @@ export default {
 
 <style scoped>
 @media (min-width: 800px) {
+  /*.blocks {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    overflow: hidden;
+
+    height: 100%;
+    max-height: 1200px;
+  }
   .block {
+    width: calc(33% - 2 * 10px);
+    padding: 10px;
+  }*/
+
+  .blocks {
+    width:100%;
+    column-count: 3;
+    column-gap: 0;
+  }
+
+  .block {
+    display: block;
+    width: calc(100% - 20px);
+    break-inside: avoid;
+    padding: 10px;
+  }
+
+
+  /*.block {
     float: left;
     padding: 8px;
     width: 30%;
-  }
+  }*/
   .block-checkbox {
     display: none;
   }
@@ -580,8 +594,14 @@ export default {
 }
 
 @media (max-width: 799px) {
+  .item {
+    padding: 0 0 0 24px;
+  }
   .block {
     padding: 0px;
+  }
+  .price {
+    padding: 0 24px 0 0;
   }
   /* Acordeon styles */
   .tab {
@@ -654,10 +674,6 @@ export default {
   font-size: 26px;
 }
 
-.item {
-  padding: 0 0 0 24px;
-}
-
 .item-details {
   text-align: left;
   font-size: 20px;
@@ -677,7 +693,6 @@ export default {
 
 .price {
   float: right;
-  padding: 0 24px 0 0;
   font-size: 18px;
 }
 
