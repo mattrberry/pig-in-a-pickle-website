@@ -16,11 +16,6 @@ import Crossfade from './components/Crossfade.vue'
 
 export default {
   name: 'app',
-  data: function () {
-    return {
-      numImages: 9
-    }
-  },
   components: {
     AppNav,
     Crossfade
