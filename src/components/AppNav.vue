@@ -1,6 +1,6 @@
 <template id="nav">
   <div id="nav">
-    <router-link id="nav-home" to="/">Pig in a Pickle</router-link>
+    <router-link id="nav-home" to="/" onclick="document.getElementById('menu-toggle').checked = false;">Pig in a Pickle</router-link>
     <label for="menu-toggle"></label>
     <input type="checkbox" id="menu-toggle" />
     <div id="menu-items">
