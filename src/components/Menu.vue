@@ -549,22 +549,6 @@ export default {
 
 <style scoped>
 @media (min-width: 800px) {
-  /*.blocks {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    overflow: hidden;
-
-    height: 100%;
-    max-height: 1200px;
-  }
-  .block {
-    width: calc(33% - 2 * 10px);
-    padding: 10px;
-  }*/
-
   .blocks {
     width:100%;
     column-count: 3;
@@ -577,13 +561,6 @@ export default {
     break-inside: avoid;
     padding: 10px;
   }
-
-
-  /*.block {
-    float: left;
-    padding: 8px;
-    width: 30%;
-  }*/
   .block-checkbox {
     display: none;
   }
@@ -670,21 +647,25 @@ export default {
 
 .item-name {
   text-align: left;
-  margin: 2px;
+  margin: 10px 0 0 0;
   font-size: 26px;
+}
+
+.item:nth-of-type(1) > .item-name {
+  margin: 0 0 0 0;
 }
 
 .item-details {
   text-align: left;
   font-size: 20px;
   font-style: italic;
-  margin: -5px 2px 2px 2px;
+  margin: -5px 0 0 0;
 }
 
 .item-prices {
   text-align: left;
   font-size: 20px;
-  margin: 2px;
+  margin: 0;
 }
 
 .price:before {
@@ -695,10 +676,4 @@ export default {
   float: right;
   font-size: 18px;
 }
-
-/*hr {
-  height: 0px;
-  position: relative;
-  margin: -3px 0 0 0;
-}*/
 </style>
