@@ -17,9 +17,9 @@ export default {
   data: function () {
     return {
       pages: [
-      { url: '/', name: 'Home' },
-      { url: '/about', name: 'About' },
-      { url: '/menu', name: 'Menu' }
+        { url: '/', name: 'Home' },
+        { url: '/about', name: 'About' },
+        { url: '/menu', name: 'Menu' }
       ]
     }
   }
