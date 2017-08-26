@@ -25,17 +25,17 @@ export default {
   background-size: cover;
   background-position: center center;
   color: transparent;
-  height: 100%;
+  height: 100vh;
   left: 0px;
   opacity: 0;
   position: fixed;
   top: 0px;
-  width: 100%;
+  width: 100vw;
   z-index: -1;
-  margin:0 auto;
+  margin: 0 auto;
 }
-.images > figure:nth-child(1) { 
-  background-image: url('../assets/bg-1-min.png'); 
+.images > figure:nth-child(1) {
+  background-image: url('../assets/bg-1-min.png');
 }
 .images > figure:nth-child(2) {
   animation-delay: 6s;
@@ -61,7 +61,7 @@ export default {
   animation-delay: 36s;
   background-image: url('../assets/bg-7-min.png');
 }
-@keyframes imageAnimation {  
+@keyframes imageAnimation {
   0% {
     animation-timing-function: ease-in;
     opacity: 0;
