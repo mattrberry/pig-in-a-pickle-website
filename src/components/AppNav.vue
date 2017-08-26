@@ -4,8 +4,8 @@
     <label for="menu-toggle"></label>
     <input type="checkbox" id="menu-toggle" />
     <div id="menu-items">
-      <p class="menu-item" onclick="document.getElementById('menu-toggle').checked = false;" v-for="page in pages">
-        <router-link v-bind:to="page.url">{{page.name}}</router-link>
+      <p class="menu-item" onclick="document.getElementById('menu-toggle').checked = false;" v-for="route in routes">
+        <router-link v-bind:to="route.path">{{route.name}}</router-link>
       </p>
     </div>
   </div>
@@ -14,13 +14,17 @@
 <script>
 export default {
   name: 'nav',
-  data: function () {
+  created () {
+    this.$router.options.routes.forEach(route => {
+      this.routes.push({
+        name: route.name,
+        path: route.path
+      })
+    })
+  },
+  data () {
     return {
-      pages: [
-        { url: '/', name: 'Home' },
-        { url: '/about', name: 'About' },
-        { url: '/menu', name: 'Menu' }
-      ]
+      routes: []
     }
   }
 }
