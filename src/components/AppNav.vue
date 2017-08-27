@@ -67,6 +67,10 @@ export default {
   .menu-item {
     display: block;
   }
+  .menu-item a {
+    display: inline-block;
+    width: 95%;
+  }
 }
 
 #nav {
