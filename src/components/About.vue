@@ -26,4 +26,8 @@ img {
   max-width: 300px;
   border: 2px solid #FFF;
 }
+
+p:last-child {
+  margin-bottom: 10px;
+}
 </style>

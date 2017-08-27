@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6, p, a, span {
   margin: 0;
 }
 video {
-  margin: 20px 0px 20px 0px;;
+  margin: 20px 0px 10px 0px;;
   width: 90%;
   max-width: 500px;
   border: 2px solid #FFF;

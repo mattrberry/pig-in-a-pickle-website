@@ -29,5 +29,6 @@ iframe {
   width: 90%;
   height: 400px;
   border: 2px solid #FFF;
+  margin-bottom: 10px;
 }
 </style>
