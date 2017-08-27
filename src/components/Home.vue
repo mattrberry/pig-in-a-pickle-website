@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <EventBanner></EventBanner>
     <h1 class="first-line">Welcome to Pig in a Pickle</h1>
     <h3>Bringing you the best in Bay Area Bar-B-Q!</h3>
     <br>
@@ -18,8 +19,13 @@
 </template>
 
 <script>
+import EventBanner from './EventBanner.vue'
+
 export default {
-  name: 'hello'
+  name: 'hello',
+  components: {
+    EventBanner
+  }
 }
 </script>
 
