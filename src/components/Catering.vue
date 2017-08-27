@@ -1,8 +1,8 @@
 <template>
   <div class="catering">
-    <h3><span class="red center">We can customize any event to your specific needs, so let’s start with the basics...</span></h3>
-    <h3><span class="red center">Catering office hours Monday- Friday 9am to 4pm</span></h3>
-    <h3><span class="red center">Reach us at <a href="tel:4158918124">415-891-8124</a> or <a href="mailto:piapevents@gmail.com">piapevents@gmail.com</a></span></h3>
+    <h3 class="first-line"><span class="red center">We can customize any event to your specific needs, so let’s start with the basics...</span></h3>
+    <h3><span class="center">Catering office hours Monday- Friday 9am to 4pm</span></h3>
+    <h3><span class="center">Reach us at <a href="tel:4158918124"><span class="red">415-891-8124</span></a> or <a href="mailto:piapevents@gmail.com"><span class="red">piapevents@gmail.com</span></a></span></h3>
     <div id="slides">
       <img class="slide" v-for="n in 9" :src="imgSrc(n)">
     </div>
@@ -26,7 +26,7 @@ export default {
         this.slideIndex = 0
       }
       slides[this.slideIndex].style.display = 'block'
-      setTimeout(this.carousel, 3000)
+      setTimeout(this.carousel, 4000)
     }
   },
   data: function () {
@@ -43,10 +43,20 @@ export default {
 <style scoped>
 .slide {
   width: 100%;
+  top: 0;
 }
 #slides {
   border: 2px #FFF solid;
   width: 80%;
   margin: 0 auto;
+  margin-top: 10px;
+}
+
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 </style>
