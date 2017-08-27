@@ -82,7 +82,7 @@ export default {
 }
 .menu-item, #nav-home {
   margin: 0;
-  padding: 2px 4px 2px 4px;
+  padding: 2px 6px 2px 6px;
   text-decoration: none;
   color: #FFF;
 
