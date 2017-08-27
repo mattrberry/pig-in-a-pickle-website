@@ -1,6 +1,6 @@
 <template>
   <div class="menu">
-    <h3><span class="red">All our meats are Hormone & Antibiotic Free, Humanely Raised and Locally Sourced when possible, and are smoked with California White Oak.</span></h3>
+    <h3 class="first-line"><span class="red">All our meats are Hormone & Antibiotic Free, Humanely Raised and Locally Sourced when possible, and are smoked with California White Oak.</span></h3>
     <div class="blocks">
       <div v-for="block in menu_blocks" v-bind:id="block.name" class="block tab">
         <input v-bind:id="classAddTab(block.name)" type="checkbox" name="tabs" class="block-checkbox">

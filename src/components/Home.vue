@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>Welcome to Pig in a Pickle</h1>
+    <h1 class="first-line">Welcome to Pig in a Pickle</h1>
     <h3>Bringing you the best in Bay Area Bar-B-Q!</h3>
     <br>
     <img id="pig-1" src="../assets/pig.png">
