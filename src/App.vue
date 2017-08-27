@@ -64,12 +64,16 @@ p {
   top: 0;
   left: 0;
   width: calc(100% - 2 * 8px);
-  margin-top: 50px;
+  margin-top: 70px;
   padding: 8px;
 }
 #inner-container {
   max-width: 800px;
   margin: 0 auto;
+}
+
+.first-line {
+  margin-top: 0;
 }
 
 span.center {
