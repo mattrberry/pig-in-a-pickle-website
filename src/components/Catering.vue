@@ -17,16 +17,24 @@ export default {
       return '/static/catering/c' + num + '.jpg'
     },
     carousel: function () {
-      var slides = document.getElementsByClassName('slide')
-      for (var idx = 0; idx < slides.length; idx++) {
-        slides[idx].style.display = 'none'
+      try {
+        var slides = document.getElementsByClassName('slide')
+        for (var idx = 0; idx < slides.length; idx++) {
+          slides[idx].style.display = 'none'
+        }
+        this.slideIndex++
+        if (this.slideIndex >= slides.length) {
+          this.slideIndex = 0
+        }
+        slides[this.slideIndex].style.display = 'block'
+        setTimeout(this.carousel, 4000)
+      } catch (e) {
+        if (e instanceof TypeError) {
+          console.log('Couldn\'t style image. This is expected if you have navigated off of the catering page.')
+        } else {
+          throw e
+        }
       }
-      this.slideIndex++
-      if (this.slideIndex >= slides.length) {
-        this.slideIndex = 0
-      }
-      slides[this.slideIndex].style.display = 'block'
-      setTimeout(this.carousel, 4000)
     }
   },
   data: function () {
@@ -50,6 +58,7 @@ export default {
   width: 80%;
   margin: 0 auto;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 h3 {
