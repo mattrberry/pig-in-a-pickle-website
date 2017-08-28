@@ -1,12 +1,12 @@
 <template>
   <div class="catering">
-    <h3 class="first-line"><span class="red center">We can customize any event to your specific needs, so let’s start with the basics...</span></h3>
-    <h3><span class="center">Catering office hours Monday- Friday 9am to 4pm</span></h3>
-    <h3><span class="center">Reach us at <a href="tel:4158918124"><span class="red">415-891-8124</span></a> or <a href="mailto:piapevents@gmail.com"><span class="red">piapevents@gmail.com</span></a></span></h3>
-    <div id="slides">
-      <img class="slide" v-for="n in 9" :src="imgSrc(n)">
-    </div>
+  <h3 class="first-line"><span class="red center">We can customize any event to your specific needs, so let’s start with the basics...</span></h3>
+  <h3><span class="center">Catering office hours Monday- Friday 9am to 4pm</span></h3>
+  <h3><span class="center">Reach us at <a href="tel:4158918124"><span class="red">415-891-8124</span></a> or <a href="mailto:piapevents@gmail.com"><span class="red">piapevents@gmail.com</span></a></span></h3>
+  <div id="slides">
+    <img class="slide" v-for="n in 9" :src="imgSrc(n)">
   </div>
+</div>
 </template>
 
 <script>
