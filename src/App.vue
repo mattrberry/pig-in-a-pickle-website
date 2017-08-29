@@ -34,7 +34,7 @@ html {
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: #964F4C;
+  background: #7D3A38;
 }
 
 #app {
@@ -84,6 +84,7 @@ span.center {
 }
 
 span.red {
+  color: #7D3A38;
   color: #D9534F;
   text-shadow: 0 0 3px black;
 }

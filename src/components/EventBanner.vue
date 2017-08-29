@@ -91,7 +91,7 @@ export default {
   width: 60%;
 
   position: relative;
-  background: #964F4C;
+  background: #7D3A38;
   color: #fff;
   text-align: center;
   padding: .5em 1.25em; /* Adjust to suit */
@@ -102,7 +102,7 @@ export default {
   position: absolute;
   display: block;
   bottom: -1em;
-  border: 1.5em solid #783F3C;
+  border: 1.5em solid #632E2C;
   z-index: -1;
 }
 .ribbon:before {
@@ -120,7 +120,7 @@ export default {
   position: absolute;
   display: block;
   border-style: solid;
-  border-color: #693734 transparent transparent transparent;
+  border-color: #562826 transparent transparent transparent;
   bottom: -1em;
 }
 .ribbon .ribbon-content:before {

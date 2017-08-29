@@ -74,7 +74,7 @@ export default {
 }
 
 #nav {
-  background: #964F4C;
+  background: #7D3A38;
   position: fixed;
   top: 0;
   left: 0;
