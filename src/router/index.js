@@ -7,6 +7,7 @@ import Catering from '@/components/Catering'
 import Delivery from '@/components/Delivery'
 import FindUs from '@/components/FindUs'
 import Vendors from '@/components/Vendors'
+import Events from '@/components/Events'
 
 Vue.use(Router)
 
@@ -47,6 +48,11 @@ export default new Router({
       path: '/vendors',
       name: 'Vendors',
       component: Vendors
+    },
+    {
+      path: '/events',
+      name: 'Events',
+      component: Events
     }
   ],
   scrollBehavior (to, from, savedPosition) {
