@@ -13,7 +13,10 @@
       </div>
     </div>
     <hr id="menu-vendor-seperator">
-
+    <h1 id="vendor-header">Our Vendors</h1>
+    <div class="vendor-logo-container" v-for="vendor in vendors">
+      <img class="vendor-logo" :src="vendor.logo">
+    </div>
   </div>
 </template>
 
@@ -562,6 +565,30 @@ export default {
           url: 'https://www.ranchogordo.com/',
           product: 'Piquinto Beans',
           logo: 'https://cdn.shopify.com/s/files/1/0685/2511/files/rancho_gordo_logo_360x.png?v=1501443167'
+        },
+        {
+          name: 'Baia Pasta',
+          url: 'http://www.baiapasta.com/',
+          product: '',
+          logo: 'http://www.baiapasta.com/wp-content/uploads/2014/04/baia-banner_large.jpg'
+        },
+        {
+          name: 'Toscano Family Farm',
+          url: 'http://www.toscanofamilyfarm.com/',
+          product: '',
+          logo: 'http://www.toscanofamilyfarm.com/images/toscano_logo_web.jpg'
+        },
+        {
+          name: 'Logan Turnpike Mill',
+          url: 'https://loganturnpikemill.com/',
+          product: 'Cornmeal',
+          logo: 'https://loganturnpikemill.com/skin/frontend/default/default/images/fm/hdr-logo.png'
+        },
+        {
+          name: 'Central Milling',
+          url: 'https://centralmilling.com/',
+          product: 'Bread, Flower',
+          logo: 'https://centralmilling.com/wp-content/themes/central-milling/library/images/central-milling-logo@2x.png'
         }
       ]
     }
@@ -697,5 +724,28 @@ export default {
 .price {
   float: right;
   font-size: 18px;
+}
+
+
+
+#menu-vendor-seperator {
+  margin: 20px 0 20px 0;
+}
+
+
+
+#vendor-header {
+  margin-top: 30px;
+}
+
+.vendor-logo-container {
+  max-width: 400px;
+  display: inline-block;
+}
+
+.vendor-logo {
+  min-height: 80px;
+  max-width: 300px;
+  padding: 20px;
 }
 </style>
