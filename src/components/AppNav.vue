@@ -4,7 +4,7 @@
     <label for="menu-toggle"></label>
     <input type="checkbox" id="menu-toggle" />
     <div id="menu-items">
-      <p class="menu-item" onclick="document.getElementById('menu-toggle').checked = false;" v-for="route in routes">
+      <p class="menu-item" onclick="document.getElementById('menu-toggle').checked = false;" v-for="route in routes" :id="route.name">
         <router-link v-bind:to="route.path">{{route.name}}</router-link>
       </p>
     </div>
@@ -31,6 +31,11 @@ export default {
 </script>
 
 <style scoped>
+#Vendors {
+  display: none;
+}
+
+
 @media (min-width: 801px) {
   #menu-items {
     display: inline-block;
