@@ -7,6 +7,7 @@
          <!-- <p id="ribbon-content-desc">{{nextEvent.desc}}</p> -->
        </p>
     </h1>
+    <p id="info"><router-link id="nav-home" to="/events"><i>Click here for more info!</i></router-link></p>
   </div>
 </template>
 
@@ -80,7 +81,7 @@ export default {
 .event-banner {
   width: 100%;
   margin: 0 auto;
-  /*margin-bottom: 15px;*/
+  margin-bottom: 15px;
 }
 
 
@@ -147,5 +148,14 @@ p {
 }
 #ribbon-content-title, #ribbon-content-head, #ribbon-content-desc {
   line-height: 22px;
+}
+
+
+#info {
+  margin-top: -40px;
+}
+#info a {
+  text-decoration: none;
+  color: #FFF;
 }
 </style>
