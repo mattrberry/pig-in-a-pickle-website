@@ -12,6 +12,8 @@
         </div>
       </div>
     </div>
+    <hr id="menu-vendor-seperator">
+
   </div>
 </template>
 
@@ -541,6 +543,26 @@ export default {
             }
           ]
         }
+      ],
+      vendors: [
+        {
+          name: 'Hill Meat Company',
+          url: 'http://www.hillmeat.com/',
+          product: 'Pork',
+          logo: 'http://www.hillmeat.com/wp-content/uploads/2017/02/hills-premium-meats-logo.png'
+        },
+        {
+          name: 'Brandt Beef',
+          url: 'http://www.brandtbeef.com/',
+          product: 'Brisket',
+          logo: 'http://www.brandtbeef.com/content/cache/skins/MrLobster/images/image-logo.png'
+        },
+        {
+          name: 'Rancho Gordo',
+          url: 'https://www.ranchogordo.com/',
+          product: 'Piquinto Beans',
+          logo: 'https://cdn.shopify.com/s/files/1/0685/2511/files/rancho_gordo_logo_360x.png?v=1501443167'
+        }
       ]
     }
   }
@@ -548,7 +570,7 @@ export default {
 </script>
 
 <style scoped>
-@media (min-width: 800px) {
+@media (min-width: 801px) {
   .blocks {
     width:100%;
     column-count: 3;
@@ -557,9 +579,9 @@ export default {
 
   .block {
     display: block;
-    width: calc(100% - 20px);
+    width: calc(100% - 24px);
     break-inside: avoid;
-    padding: 10px;
+    padding: 12px;
   }
   .block-checkbox {
     display: none;
@@ -570,7 +592,7 @@ export default {
   }
 }
 
-@media (max-width: 799px) {
+@media (max-width: 800px) {
   .item {
     padding: 0 0 0 24px;
   }
