@@ -28,15 +28,6 @@ html {
   overflow-y: scroll;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: #7D3A38;
-}
-
 #app {
   font-family: 'Rancho', cursive;
   -webkit-font-smoothing: antialiased;
