@@ -552,43 +552,43 @@ export default {
           name: 'Hill Meat Company',
           url: 'http://www.hillmeat.com/',
           product: 'Pork',
-          logo: 'http://www.hillmeat.com/wp-content/uploads/2017/02/hills-premium-meats-logo.png'
+          logo: '/static/vendors/hills_premium_meats.png'
         },
         {
           name: 'Brandt Beef',
           url: 'http://www.brandtbeef.com/',
           product: 'Brisket',
-          logo: 'http://www.brandtbeef.com/content/cache/skins/MrLobster/images/image-logo.png'
+          logo: '/static/vendors/brandt_beef.png'
         },
         {
           name: 'Rancho Gordo',
           url: 'https://www.ranchogordo.com/',
           product: 'Piquinto Beans',
-          logo: 'https://cdn.shopify.com/s/files/1/0685/2511/files/rancho_gordo_logo_360x.png?v=1501443167'
+          logo: '/static/vendors/rancho_gordo.png'
         },
         {
           name: 'Baia Pasta',
           url: 'http://www.baiapasta.com/',
           product: '',
-          logo: 'http://www.baiapasta.com/wp-content/uploads/2014/04/baia-banner_large.jpg'
+          logo: '/static/vendors/baia_pasta.jpg'
         },
         {
           name: 'Toscano Family Farm',
           url: 'http://www.toscanofamilyfarm.com/',
           product: '',
-          logo: 'http://www.toscanofamilyfarm.com/images/toscano_logo_web.jpg'
+          logo: '/static/vendors/toscano_family_farm.jpg'
         },
         {
           name: 'Logan Turnpike Mill',
           url: 'https://loganturnpikemill.com/',
           product: 'Cornmeal',
-          logo: 'https://loganturnpikemill.com/skin/frontend/default/default/images/fm/hdr-logo.png'
+          logo: '/static/vendors/logan_turnpike_mill.png'
         },
         {
           name: 'Central Milling',
           url: 'https://centralmilling.com/',
           product: 'Bread, Flower',
-          logo: 'https://centralmilling.com/wp-content/themes/central-milling/library/images/central-milling-logo@2x.png'
+          logo: '/static/vendors/central_milling.png'
         }
       ]
     }
