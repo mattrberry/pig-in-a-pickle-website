@@ -68,7 +68,7 @@ export default {
       },
       date: new Date().toISOString(),
       key: 'AIzaSyD8Pqp0WEP8v-jNQuNto6TydWc8WyVlwfQ',
-      calendarID: 'piginapickle.com_adib4t2ct9jpipd3qao5pd4pgo@group.calendar.google.com'
+      calendarID: 'info@piginapickle.com'
     }
   },
   mounted: function () {
