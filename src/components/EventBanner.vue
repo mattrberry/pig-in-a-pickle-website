@@ -40,23 +40,8 @@ export default {
       req.send()
     },
     daysDiffString: function (eventDate) {
-      // var currentDate = new Date(this.date)
       eventDate = new Date(eventDate + 'T12:00:00-08:00')
-      // var days = Math.floor((eventDate - currentDate) / (1000 * 60 * 60 * 24))
-
-      // var diffString
-      // if (days <= 0) {
-      //   diffString = 'Special Event Today!'
-      // } else if (days === 1) {
-      //   diffString = 'Special Event in 1 Day!'
-      // } else if (days <= 14) {
-      //   diffString = 'Special Event in ' + days + ' Days!'
-      // } else {
-      //   document.getElementsByClassName('event-banner')[0].style.display = 'none'
-      // }
-
       return 'Special Event on ' + eventDate.toDateString().substring(0, eventDate.toDateString().length - 5)
-      // return diffString
     }
   },
   data: function () {
