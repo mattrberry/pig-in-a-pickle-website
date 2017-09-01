@@ -4,7 +4,6 @@
        <p class="ribbon-content">
          <p id="ribbon-content-head">{{nextEvent.head}}</p>
          <p id="ribbon-content-title">{{nextEvent.title}}</p>
-         <!-- <p id="ribbon-content-desc">{{nextEvent.desc}}</p> -->
        </p>
     </h1>
     <p id="info"><router-link id="nav-home" to="/events"><i>Click here for more info!</i></router-link></p>
