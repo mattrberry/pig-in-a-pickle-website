@@ -1,5 +1,5 @@
 <template>
-  <div class="event-banner">
+  <div v-if="nextEvent.title" class="event-banner">
     <h1 class="ribbon">
        <p class="ribbon-content">
          <p id="ribbon-content-head">{{nextEvent.head}}</p>
@@ -24,6 +24,9 @@ export default {
     },
     listener: function (data) {
       var parsed = JSON.parse(data.target.responseText)
+      if (parsed.items.length < 1) {
+        return
+      }
       this.nextEvent.title = parsed.items[0].summary
       try {
         this.nextEvent.desc = parsed.items[0].description
