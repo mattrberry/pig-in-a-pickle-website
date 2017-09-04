@@ -15,7 +15,9 @@
     <hr id="menu-vendor-seperator">
     <h1 id="vendor-header">Our Vendors</h1>
     <div class="vendor-logo-container" v-for="vendor in vendors">
-      <img class="vendor-logo" :src="vendor.logo">
+      <a class="vendor-url" :href="vendor.url" target="_blank">
+        <img class="vendor-logo" :src="vendor.logo">
+      </a>
     </div>
   </div>
 </template>
@@ -570,13 +572,13 @@ export default {
           name: 'Baia Pasta',
           url: 'http://www.baiapasta.com/',
           product: '',
-          logo: '/static/vendors/baia_pasta.jpg'
+          logo: '/static/vendors/baia_pasta.png'
         },
         {
           name: 'Toscano Family Farm',
           url: 'http://www.toscanofamilyfarm.com/',
           product: '',
-          logo: '/static/vendors/toscano_family_farm.jpg'
+          logo: '/static/vendors/toscano_family_farm.png'
         },
         {
           name: 'Logan Turnpike Mill',
@@ -739,13 +741,26 @@ export default {
 }
 
 .vendor-logo-container {
-  max-width: 400px;
   display: inline-block;
+  padding: 24px 30px;
+}
+
+@media (max-width: 800px) {
+  .vendor-logo-container {
+    width: 30%;
+  }
+}
+
+.vendor-url {
+  display: block;
+  margin: 0 auto;
+  max-width: 90px;
+  max-width: 200px;
 }
 
 .vendor-logo {
-  min-height: 80px;
-  max-width: 300px;
-  padding: 20px;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 </style>
