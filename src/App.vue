@@ -4,7 +4,9 @@
     <AppNav></AppNav>
     <div id="outer-container">
       <div id="inner-container">
-        <router-view></router-view>
+        <transition name="fade">
+          <router-view></router-view>
+        </transition>
       </div>
     </div>
   </div>
@@ -24,6 +26,20 @@ export default {
 </script>
 
 <style>
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .1s;
+}
+
+.fade-enter-active {
+  transition-delay: .1s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+
+
 html {
   overflow-y: scroll;
 }
