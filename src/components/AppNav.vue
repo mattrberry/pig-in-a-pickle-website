@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style scoped>
-#Vendors, #Events {
+#Events {
   display: none;
 }
 
