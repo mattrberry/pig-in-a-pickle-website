@@ -35,31 +35,31 @@ export default {
   margin: 0 auto;
 }
 .images > figure:nth-child(1) {
-  background-image: url('../assets/bg-1-min.png');
+  background-image: url('/static/crossfade/bg-1-min.png');
 }
 .images > figure:nth-child(2) {
   animation-delay: 6s;
-  background-image: url('../assets/bg-2-min.png');
+  background-image: url('/static/crossfade/bg-2-min.png');
 }
 .images > figure:nth-child(3) {
   animation-delay: 12s;
-  background-image: url('../assets/bg-3-min.png');
+  background-image: url('/static/crossfade/bg-3-min.png');
 }
 .images > figure:nth-child(4) {
   animation-delay: 18s;
-  background-image: url('../assets/bg-4-min.png');
+  background-image: url('/static/crossfade/bg-4-min.png');
 }
 .images > figure:nth-child(5) {
   animation-delay: 24s;
-  background-image: url('../assets/bg-5-min.png');
+  background-image: url('/static/crossfade/bg-5-min.png');
 }
 .images > figure:nth-child(6) {
   animation-delay: 30s;
-  background-image: url('../assets/bg-6-min.png');
+  background-image: url('/static/crossfade/bg-6-min.png');
 }
 .images > figure:nth-child(7) {
   animation-delay: 36s;
-  background-image: url('../assets/bg-7-min.png');
+  background-image: url('/static/crossfade/bg-7-min.png');
 }
 @keyframes imageAnimation {
   0% {
