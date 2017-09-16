@@ -18,52 +18,12 @@ export default {
   methods: {
     imgSrc: function (num) {
       return '/static/catering/c' + num + '.jpg'
-    },
-    oneHuh: function (num) {
-      // return num.toString()
-      return num === 0 ? 'first' : ''
-    },
-    carousel: function () {
-      try {
-        var slides = document.getElementsByClassName('slide')
-        for (var idx = 0; idx < slides.length; idx++) {
-          slides[idx].style.display = 'none'
-        }
-        this.slideIndex++
-        if (this.slideIndex >= slides.length) {
-          this.slideIndex = 0
-        }
-        slides[this.slideIndex].style.display = 'block'
-        setTimeout(this.carousel, 4000)
-      } catch (e) {
-        if (e instanceof TypeError) {
-          console.log('Couldn\'t style image. This is expected if you have navigated off of the catering page.')
-        } else {
-          throw e
-        }
-      }
     }
-  },
-  data: function () {
-    return {
-      slideIndex: 100000
-    }
-  },
-  mounted: function () {
-    // this.carousel()
   }
 }
 </script>
 
 <style scoped>
-/*.container {
-  overflow: hidden;
-  height: 500px;
-  width: 100%;
-}*/
-img {
-  /*height: 100%;*/
-}
 #first {
   width: 100%;
 }
@@ -76,7 +36,6 @@ img {
 
   animation: fade-in 40s linear infinite;
 }
-/* 1280x854 */
 #slides {
   border: 2px #FFF solid;
   width: 80%;
@@ -84,9 +43,6 @@ img {
   margin-top: 10px;
   margin-bottom: 10px;
   position: relative;
-
-  /*height: 100%;
-  width: 12800px;*/
 }
 
 #slides > .slide:nth-child(2) {
