@@ -66,6 +66,9 @@ h3 {
 p {
   font-size: 26px;
 }
+li {
+  font-size: 26px;
+}
 
 #outer-container {
   top: 0;
