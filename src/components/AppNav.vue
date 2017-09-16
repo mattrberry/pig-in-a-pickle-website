@@ -16,6 +16,9 @@ export default {
   name: 'nav',
   created () {
     this.$router.options.routes.forEach(route => {
+      if (route.name === 'Events') {
+        return
+      }
       this.routes.push({
         name: route.name,
         path: route.path
@@ -31,11 +34,6 @@ export default {
 </script>
 
 <style scoped>
-#Events {
-  display: none;
-}
-
-
 @media (min-width: 801px) {
   #menu-items {
     display: inline-block;
