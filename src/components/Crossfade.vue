@@ -82,8 +82,10 @@ export default {
 }
 
 #darkener {
-  background: black;
-  opacity: .6;
+  /*background: black;
+  opacity: .6;*/
+  background-image: linear-gradient(90deg, rgba(0,0,0,.4) 0%, rgba(0,0,0,.5) 20%, rgba(0,0,0,.6) 50%, rgba(0,0,0,.5) 80%, rgba(0,0,0,.4) 100%);
+
   position: fixed;
   width: 100vw;
   height: 100vh;
