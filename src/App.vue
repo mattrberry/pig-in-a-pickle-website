@@ -98,4 +98,11 @@ span.red {
   color: #D9534F;
   text-shadow: 0 0 3px black;
 }
+
+form * {
+  -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
 </style>
