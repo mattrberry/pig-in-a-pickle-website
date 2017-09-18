@@ -53,6 +53,9 @@ html {
   color: white;
   margin-top: 50px;
 }
+textarea {
+  font-family: 'Arial';
+}
 body {
   margin: 0 auto;
   background: gray;
@@ -104,5 +107,50 @@ form * {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   -webkit-box-sizing: content-box;
+}
+
+
+
+form * {
+  height: 30px;
+  background: rgba(0,0,0,0);
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+
+  display: inline-block;
+  width: 40%;
+}
+
+@media screen and (max-width: 800px) {
+  form * {
+    width: 80%;
+  }
+}
+
+select * {
+  background-color: #FFFFFF;
+  color: #333333;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: #FFFFFF;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #FFFFFF;
+  opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #FFFFFF;
+  opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #FFFFFF;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #FFFFFF;
 }
 </style>
