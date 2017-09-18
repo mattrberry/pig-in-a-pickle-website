@@ -16,7 +16,7 @@ export default {
   name: 'nav',
   created () {
     this.$router.options.routes.forEach(route => {
-      if (route.name === 'Events') {
+      if (route.name === 'Events' || route.name === 'Success' || route.name === '404') {
         return
       }
       this.routes.push({
