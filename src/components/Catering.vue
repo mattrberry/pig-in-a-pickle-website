@@ -28,6 +28,36 @@
     </div>
     <br>
     <p id="follow-buffet"><span class="red">Don’t see what your looking for? We can do any combination of meats and sides to customize a menu that’s right for you. Call our catering department for further details.</span></p>
+    <br><br>
+    <div id="favorite-events">
+      <h1>Some of our Favorite Events have Included:</h1>
+      <p>Backyard/Beach Barbecue's</p>
+      <p>Weddings, Life Celebrations, Baby Showers (even a few stork deliveries to Marin General!),</p>
+      <p>Employee/Corporate Picnics,</p>
+      <p>Overnight Corporate Camp Out (This had multiple meals including a cowboy breakfast and a midnight movie snack!)</p>
+    </div>
+    <br><br>
+    <h1>Interested? Send us a catering request!</h1>
+    <form action="https://formspree.io/catering@piginapickle.com" method="POST">
+      <input type="text" name="name" placeholder="Your name">
+      <input type="tel" name="phone" placeholder="Your phone number">
+      <input type="email" name="email" placeholder="Your email">
+      <input type="text" name="date" placeholder="Date of event">
+      <input type="text" name="time" placeholder="Time of event">
+      <input type="number" name="guests" placeholder="Number of guests">
+      <input type="text" name="location" placeholder="Location">
+      <select name="preference">
+        <option>Catering preference</option>
+        <option>Pick Up</option>
+        <option>Delivered</option>
+        <option>Delivered and Set Up</option>
+        <option>Fully Staffed</option>
+      </select>
+      <input type="submit" value="Send Catering Request">
+      <input type="hidden" name="_next" value="https://piginapickle.com/success">
+      <input type="hidden" name="_subject" value="Catering Request">
+    </form>
+    <br>
   </div>
 </template>
 
@@ -270,5 +300,9 @@ a {
 
 #addons {
   max-width: 100%;
+}
+
+#favorite-events p {
+  margin-top: 8px;
 }
 </style>
