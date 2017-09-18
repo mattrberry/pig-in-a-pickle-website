@@ -7,6 +7,9 @@ import Catering from '@/components/Catering'
 import Delivery from '@/components/Delivery'
 import FindUs from '@/components/FindUs'
 import Events from '@/components/Events'
+import Contact from '@/components/Contact'
+import Success from '@/components/Success'
+import NotFound from '@/components/NotFound.vue'
 
 Vue.use(Router)
 
@@ -47,6 +50,21 @@ export default new Router({
       path: '/events',
       name: 'Events',
       component: Events
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: Contact
+    },
+    {
+      path: '/success',
+      name: 'Success',
+      component: Success
+    },
+    {
+      path: '*',
+      name: '404',
+      component: NotFound
     }
   ],
   scrollBehavior (to, from, savedPosition) {
