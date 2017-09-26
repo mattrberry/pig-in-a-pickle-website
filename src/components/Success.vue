@@ -2,7 +2,7 @@
   <div class="delivery">
     <h1 class="first-line">Your message has been successfully delivered!</h1>
     <p>We'll get back to you as soon as we can.</p>
-    <a href="/">Home</a>
+    <router-link to="/">Home</router-link>
   </div>
 </template>
 

@@ -2,7 +2,7 @@
   <div class="delivery">
     <h1 class="first-line">404</h1>
     <h3>Not Found!</h3>
-    <a href="/">Home</a>
+    <router-link to="/">Home</router-link>
   </div>
 </template>
 
