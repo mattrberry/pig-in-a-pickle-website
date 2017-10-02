@@ -150,7 +150,7 @@ export default {
             },
             {
               name: 'Chicken Salad Sandwich',
-              details: 'Pulled Chicken, Parsley & Celery Tossed in Alabama White Sauce With Caramelized Onions & Romaine Hearts',
+              details: 'Pulled Chicken, Parsley, & Celery Tossed in Alabama White Sauce With Caramelized Onions & Romaine Hearts',
               prices: [
                 {
                   label: 'Per Sandwich',
