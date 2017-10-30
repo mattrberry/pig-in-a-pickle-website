@@ -48,6 +48,7 @@ export default {
 @media (max-width: 800px) {
   #menu-toggle {
     clip: rect(0, 0, 0, 0);
+    display: none;
   }
   label[for="menu-toggle"]:before, #menu-toggle {
     content: "\2630";
@@ -55,9 +56,10 @@ export default {
     height: 50px;
     right: 0;
     line-height: 50px;
-    position: fixed;
+    position: absolute;
     margin: 0;
     padding: 0;
+    float: right;
   }
   #menu-items {
     margin-top: -100vh;
