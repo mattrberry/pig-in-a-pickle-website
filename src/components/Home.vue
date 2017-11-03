@@ -15,16 +15,19 @@
       <source src="/static/home/intro.mp4" type="video/mp4">
       Unable to play video on your browser.
     </video>
+    <Order></Order>
   </div>
 </template>
 
 <script>
 import EventBanner from './EventBanner.vue'
+import Order from './Order.vue'
 
 export default {
   name: 'hello',
   components: {
-    EventBanner
+    EventBanner,
+    Order
   }
 }
 </script>
