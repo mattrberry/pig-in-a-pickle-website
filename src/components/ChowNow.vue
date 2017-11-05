@@ -1,48 +1,23 @@
 <template>
   <div id="chownow-component">
-    <label for="chownow-toggle" v-on:click="toggleDark()"></label>
-    <input type="checkbox" id="chownow-toggle" />
     <div id="chownow-wrap">
       <iframe src="https://ordering.chownow.com/order/9478/locations" id="chownow" frameBorder="0"></iframe>
-      <div id="chownow-close" v-on:click="closeChowNow(); toggleDark()">
-      </div>
+      <div id="chownow-close" v-on:click="toggleChowNow()"></div>
     </div>
     <div id="darken"></div>
   </div>
 </template>
 
 <script>
+import { ChowNowToggle } from './mixins/ChowNowToggle.js'
+
 export default {
-  name: 'order',
-  methods: {
-    closeChowNow: function () {
-      document.getElementById('chownow-toggle').checked = false
-    },
-    toggleDark: function () {
-      let el = document.getElementById('darken')
-      if (el.classList.contains('dark')) {
-        el.classList.remove('dark')
-      } else {
-        el.classList.add('dark')
-      }
-    }
-  }
+  name: 'chownow',
+  mixins: [ChowNowToggle]
 }
 </script>
 
 <style scoped>
-#chownow-toggle {
-  clip: rect(0, 0, 0, 0);
-  display: none;
-}
-label[for="chownow-toggle"]:before {
-  content: "Order Now!";
-  padding: 10px 20px;
-  margin: 200px auto;
-  background: #7D3A38;
-  font-size: 24px;
-  border-radius: 8px;
-}
 #chownow-wrap {
   z-index: 100;
   position: fixed;
@@ -54,7 +29,7 @@ label[for="chownow-toggle"]:before {
   transition: transform .4s ease-in;
   overflow: hidden;
 }
-#chownow-toggle:checked + #chownow-wrap {
+#chownow-wrap.open {
   transform: translateX(0%);
 }
 #chownow {

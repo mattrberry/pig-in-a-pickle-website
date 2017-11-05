@@ -9,23 +9,47 @@
         </transition>
       </div>
     </div>
+    <ChowNowButton></ChowNowButton>
+    <ChowNow></ChowNow>
   </div>
 </template>
 
 <script>
 import AppNav from './components/AppNav.vue'
 import Crossfade from './components/Crossfade.vue'
+import ChowNow from './components/ChowNow.vue'
+import ChowNowButton from './components/ChowNowButton.vue'
 
 export default {
   name: 'app',
   components: {
     AppNav,
-    Crossfade
+    Crossfade,
+    ChowNow,
+    ChowNowButton
   }
 }
 </script>
 
 <style>
+#chownow-button {
+  position: fixed;
+  top: 50px;
+  margin: 26px 20px;
+  right: 0;
+}
+
+@media (max-width: 1200px) {
+  #chownow-button {
+    bottom: 0;
+    top: auto;
+  }
+
+  #outer-container {
+    margin-bottom: 70px;
+  }
+}
+
 .fade-enter-active, .fade-leave-active {
   transition-property: opacity;
   transition-duration: .1s;

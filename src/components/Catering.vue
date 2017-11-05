@@ -305,4 +305,14 @@ a {
 #favorite-events p {
   margin-top: 8px;
 }
+
+input[type="submit"] {
+  cursor: pointer;
+  transition: .5s all;
+}
+
+input[type="submit"]:hover {
+  background: #FFFFFF;
+  color: #7D3A38;
+}
 </style>
