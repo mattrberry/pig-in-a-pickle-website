@@ -100,9 +100,9 @@ li {
 #outer-container {
   top: 0;
   left: 0;
-  width: calc(100% - 2 * 8px);
+  width: calc(100% - 2 * 15px);
   margin-top: 70px;
-  padding: 8px;
+  padding: 15px;
 }
 #inner-container {
   max-width: 800px;

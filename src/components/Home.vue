@@ -2,7 +2,7 @@
   <div class="hello">
     <EventBanner></EventBanner>
     <h1 class="first-line">Welcome to Pig in a Pickle</h1>
-    <h3>Bringing you the best in Bay Area Bar-B-Q!</h3>
+    <h3>Bringing you the best in Bay Area BBQ!</h3>
     <br>
     <img id="pig-1" src="/static/home/pig.png">
     <p>We <span class="red">pride ourselves</span> on using only fresh, local ingredients and the finest brisket, pork, ribs and chicken available. Everything is made <span class="red">from scratch</span> including the buns, ribs, pickles, sausage and sauces.</p>
