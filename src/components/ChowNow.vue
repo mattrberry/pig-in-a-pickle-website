@@ -39,15 +39,17 @@ export default {
   display: inline-block;
 }
 #chownow-close {
-  height: 100%;
-  text-align: left;
-  display: inline-block;
-  text-align: left;
-  width: calc(100% - 550px);
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  width: 100vw;
   background: url(/static/order/left.svg);
   background-size: 20px 20px;
   background-repeat: no-repeat;
-  background-position: 10px 10px;
+  background-position: 560px 10px;
+  z-index: -1;
 }
 
 #darken {
@@ -70,8 +72,7 @@ export default {
     width: 90%;
   }
   #chownow-close {
-    width: 10%;
-    background-position: 50% 10px;
+    background-position: calc(100% - 10px) 10px;
   }
 }
 </style>
