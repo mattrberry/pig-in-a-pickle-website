@@ -44,6 +44,12 @@ export default {
   .menu-item {
     display: inline-block;
   }
+  #nav {
+    height: 70px;
+  }
+  #menu-items, #nav-home {
+    margin-top: 16px;
+  }
 }
 @media (max-width: 800px) {
   #menu-toggle {

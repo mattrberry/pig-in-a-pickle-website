@@ -34,9 +34,10 @@ export default {
 <style>
 #chownow-button {
   position: fixed;
-  top: 50px;
-  margin: 26px 20px;
+  top: 0;
+  margin: 16px 10px;
   right: 0;
+  z-index: 10;
 }
 
 @media (max-width: 1200px) {
