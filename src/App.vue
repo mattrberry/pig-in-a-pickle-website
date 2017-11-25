@@ -9,7 +9,7 @@
         </transition>
       </div>
     </div>
-    <ChowNowButton></ChowNowButton>
+    <ChowNowButton v-if="$route.path != '/catering'"></ChowNowButton>
     <ChowNow></ChowNow>
   </div>
 </template>
@@ -27,6 +27,21 @@ export default {
     Crossfade,
     ChowNow,
     ChowNowButton
+  },
+  mounted: function () {
+    window.onhashchange = function () {
+      if (!window.location.hash) {
+        let iframe = document.getElementById('chownow-wrap')
+        let darken = document.getElementById('darken')
+        if (iframe.classList.contains('open')) {
+          iframe.classList.remove('open')
+          darken.classList.remove('dark')
+        }
+      }
+    }
+    if (window.location.hash && window.location.hash === '#order') {
+      document.getElementById('chownow-toggle-label').click()
+    }
   }
 }
 </script>
