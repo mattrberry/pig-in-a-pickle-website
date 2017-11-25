@@ -1,6 +1,6 @@
 <template>
   <div id="chownow-button">
-    <label for="chownow-toggle" v-on:click="toggleChowNow()"></label>
+    <label for="chownow-toggle" v-on:click="toggleChowNow()" id="chownow-toggle-label"></label>
     <input type="checkbox" id="chownow-toggle" />
   </div>
 </template>
