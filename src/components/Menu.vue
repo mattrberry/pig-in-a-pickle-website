@@ -433,7 +433,7 @@ export default {
           items: [
             {
               name: '2 Meats & 3 Sides',
-              details: '1/2lb of Meat',
+              details: '1/2lb of Meat | Small Sides',
               prices: [
                 {
                   label: 'Per Plate',
@@ -443,7 +443,7 @@ export default {
             },
             {
               name: '3 Meats & 3 Sides',
-              details: '3/4lb of Meat',
+              details: '3/4lb of Meat | Small Sides',
               prices: [
                 {
                   label: 'Per Plate',
@@ -453,7 +453,7 @@ export default {
             },
             {
               name: '3 Meats & 4 Sides',
-              details: '1.5lb of Meat',
+              details: '1.5-2lb of Meat | Medium Sides',
               prices: [
                 {
                   label: 'Per Platter',
