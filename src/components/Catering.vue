@@ -3,9 +3,17 @@
     <h3 class="first-line"><span class="red center">We can customize any event to your specific needs, so let’s start with the basics...</span></h3>
     <h3><span class="center">Catering office hours Monday - Friday, 9am-4pm</span></h3>
     <h3><span class="center">Reach us at <a href="tel:4158918124"><span class="red">415-891-8124</span></a> or <a href="mailto:catering@piginapickle.com"><span class="red">catering@piginapickle.com</span></a></span></h3>
-    <div id="slides">
-      <img class="slide" id="first" :src="imgSrc(0)">
-      <img v-for="(_, n) in 10" class="slide" :src="imgSrc(n)">
+    <div class="images">
+      <img id="main">
+      <div id="prevDiv" v-on:click="prev">
+        <img id="prev">
+        <div class="imgNavText">&larr;</div>
+      </div>
+      <img id="cur">
+      <div id="nextDiv" v-on:click="next">
+        <img id="next">
+        <div class="imgNavText">&rarr;</div>
+      </div>
     </div>
     <h1><span class="center">Menus for 20 people or more...</span></h1>
     <p><span class="center red">(if 100-500 people call for a custom quote)</span></p>
@@ -65,12 +73,41 @@
 export default {
   name: 'catering',
   methods: {
-    imgSrc: function (num) {
-      return '/static/catering/c' + num + '.jpg'
+    next: function (event) {
+      this.imgIdx += 1
+      this.setImg(this.imgIdx)
+    },
+    prev: function (event) {
+      this.imgIdx -= 1
+      this.setImg(this.imgIdx)
+    },
+    setImg: function (idx) {
+      var images = this.images
+      if (idx < 1) {
+        idx += 50
+      }
+      document.getElementById('main').src = images[idx % 50]
+      document.getElementById('prev').src = images[(idx - 1) % 50]
+      document.getElementById('cur').src = images[idx % 50]
+      document.getElementById('next').src = images[(idx + 1) % 50]
+    },
+    getImages: function () {
+      var l = []
+      for (var i = 1; i <= 50; i++) {
+        l.push('/static/catering/' + i.toString() + '.jpg')
+      }
+      return l
     }
+  },
+  mounted: function () {
+    this.images = this.getImages()
+    this.imgIdx = 11
+    this.setImg(this.imgIdx)
   },
   data () {
     return {
+      imgIdx: 0,
+      images: null,
       styles: [
         {
           name: '1 Meat and 3 Sides',
@@ -180,75 +217,67 @@ export default {
 </script>
 
 <style scoped>
-#first {
-  width: 100%;
-}
-#slides {
-  border: 2px #FFF solid;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 10px;
+.images {
+  margin-top: 20px;
   margin-bottom: 10px;
+}
+#main {
+  display: block;
+  margin: 0 auto;
+  border: 2px #FFF solid;
+  width: 600px;
+  height: 450px;
+  overflow: hidden;
+  object-fit: cover;
+}
+#prev, #cur, #next {
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+  object-fit: cover;
+}
+#prev, #next {
+  filter: brightness(30%);
+}
+#nextDiv, #prevDiv {
+  display: inline-block;
   position: relative;
+  cursor: pointer;
 }
-
-.slide:not(#first) {
-  width: 100%;
-  top: 0;
-  left: 0;
+.imgNavText {
   position: absolute;
-  opacity: 0;
-
-  animation: fade-in 40s linear infinite;
-}
-#slides > .slide:nth-child(2) {
-  animation-delay: 0s;
-}
-#slides > .slide:nth-child(3) {
-  animation-delay: 4s;
-}
-#slides > .slide:nth-child(4) {
-  animation-delay: 8s;
-}
-#slides > .slide:nth-child(5) {
-  animation-delay: 12s;
-}
-#slides > .slide:nth-child(6) {
-  animation-delay: 16s;
-}
-#slides > .slide:nth-child(7) {
-  animation-delay: 20s;
-}
-#slides > .slide:nth-child(8) {
-  animation-delay: 24s;
-}
-#slides > .slide:nth-child(9) {
-  animation-delay: 28s;
-}
-#slides > .slide:nth-child(10) {
-  animation-delay: 32s;
-}
-#slides > .slide:nth-child(11) {
-  animation-delay: 36s;
+  top: 50%;
+  left: 50%;
+  font-size: 80px;
+  transform: translate(-50%, -50%);
+  user-select: none;
 }
 
-@keyframes "fade-in" {
-  0% {
-    opacity: 0;
+@media screen and (max-width: 800px) {
+  #main {
+    width: 356px;
+    height: 267px;
   }
-  5% {
-    opacity: 1;
+  #next, #prev {
+    width: 178px;
+    height: 133px;
   }
-  10% {
-    opacity: 1;
-  }
-  15% {
-    opacity: 1;
-  }
-  16% {
-    opacity: 0;
+  #cur {
+    display: none;
   }
 }
+
+@media screen and (max-width: 400px) {
+  #main {
+    width: 316px;
+    height: 237px;
+  }
+  #next, #prev {
+    width: 158px;
+    height: 118px;
+  }
+}
+
 
 h1, h3, p, ul, li, span {
   margin: 0;
