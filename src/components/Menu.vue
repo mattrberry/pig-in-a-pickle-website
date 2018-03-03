@@ -285,24 +285,25 @@ export default {
               ]
             },
             {
-              name: 'Collard Greens w/ Ham Hock',
+              name: 'Mac n Cheese',
               prices: [
                 {
                   label: 'Small (8oz)',
-                  value: '4'
+                  value: '5'
                 },
                 {
                   label: 'Medium (16oz)',
-                  value: '8'
+                  value: '10'
                 },
                 {
                   label: 'Large (32oz)',
-                  value: '14'
+                  value: '18'
                 }
               ]
             },
             {
-              name: 'Vegetarian Collard Greens',
+              name: 'Collard Greens',
+              details: 'with ham hock or vegetarian',
               prices: [
                 {
                   label: 'Small (8oz)',
@@ -722,6 +723,7 @@ export default {
   text-align: left;
   font-size: 20px;
   margin: 0;
+  margin-left: 10px;
 }
 
 .price:before {
