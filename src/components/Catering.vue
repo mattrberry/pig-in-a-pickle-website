@@ -23,7 +23,12 @@
         <div v-for="style in styles" class="buffet-style">
           <p class="style-header"><b>{{style.name}}:</b> {{style.times}}</p>
           <ul class="style-options">
-            <li v-for="option in style.options" class="option">{{option.name}} ~ <i>{{option.details}}</i></li>
+            <li v-for="option in style.options" class="option">
+              {{option.name}} ~ <i>{{option.details}}</i>
+              <ul v-if="option.subdetails">
+                <li v-for="subdetail in option.subdetails">{{subdetail}}</li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -31,8 +36,12 @@
     <div id="choices">
       <div v-for="choice in choices" class="choice" :id="choice.id">
         <h1 class="choice-name"><span class="center">{{choice.name}}</span></h1>
+        <i v-if="choice.description" class="choice-description"><span class="center">{{choice.description}}</span></i>
         <p v-for="item in choice.items"class="choice-item"><span class="center">{{item}}</span></p>
       </div>
+    </div>
+    <div id="extras">
+      <p v-for="extra in extras" class="extra">{{extra}}</p>
     </div>
     <br>
     <p id="follow-buffet"><span class="red">Don’t see what your looking for? We can do any combination of meats and sides to customize a menu that’s right for you. Call our catering department for further details.</span></p>
@@ -110,7 +119,7 @@ export default {
       images: null,
       styles: [
         {
-          name: '1 Meat and 3 Sides',
+          name: '1 Meat 2 Sides and Choice of Sandwich or Slider Buns',
           times: '(only 11am-2pm)',
           options: [
             {
@@ -123,11 +132,10 @@ export default {
             },
             {
               name: 'Chicken: $12 per person',
-              details: 'includes 1/4 chicken per person'
-            },
-            {
-              name: 'Baby Back Ribs: $15 per person',
-              details: 'includes 4 ribs per person'
+              details: 'includes 1/3 lb. of meat per person',
+              subdetails: [
+                'Choice of Pulled Chicken or Chicken Salad'
+              ]
             }
           ]
         },
@@ -171,8 +179,9 @@ export default {
             'Coleslaw',
             'Potato Salad',
             'Savory Ranch Style Beans',
-            'White Cheddar Mac n Cheese',
+            'White Cheddar Mac n Cheese (add $1)',
             'Collard Greens (Ham Hocks or Vegetarian)',
+            'Seasonal Mixed Green Salad',
             'Cornbread Muffin',
             'Parker House Rolls'
           ]
@@ -191,6 +200,7 @@ export default {
         },
         {
           name: 'Beverages',
+          description: '$2 per person',
           items: [
             'House Made Lemonade',
             'Ice Tea (Regular or Sweet)',
@@ -199,17 +209,21 @@ export default {
           ]
         },
         {
-          name: 'Add-ons',
+          name: 'Deserts',
+          description: '$3 per person',
           id: 'addons',
           items: [
-            '$36 ~ Mized Green Salad (full pan serves 25-35 as a side)',
-            '$48 ~ Mixed Green Salad with Cold Pulled Chicken',
-            '$10 ~ Large Bag Kettle Tallow Chips (12oz)',
-            '$32 ~ Bread Pudding (half pan serves 10-12 people)',
-            '$32 ~ Seasonal Crisp or Cobbler (half pan server 10-12 people)',
-            '$2 ~ Non-Alcoholic Beverages (per person)'
+            'Oatmeal and Seasonal Fruit Bars (individual)',
+            'Butterscotch Pudding with Whipped Cream (individual)',
+            'Bread Pudding (½ pans, Buffet Style)',
+            'Seasonal Fruit Cobbler (½ pans, Buffet Style)'
           ]
         }
+      ],
+      extras: [
+        'Add Paper Plates, Compostable Utensils, Napkins and Wet Wipes $1 per person',
+        'Add Bamboo Plates, Compostable Utensils, Napkins and Wet Wipes $2 per person',
+        'Disposable Chafing Dishes with Serving Utensils and Sterno $15 each'
       ]
     }
   }
@@ -319,6 +333,23 @@ a {
 
 .choice-name {
   text-transform: uppercase;
+}
+
+.choice-description {
+  font-size: 24px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+#extras {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+
+.extra {
+  font-size: 22px;
+  margin-top: 6px;
 }
 
 @media screen and (min-width: 800px) {
