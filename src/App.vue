@@ -103,6 +103,9 @@ body {
 h1 {
   font-size: 32px;
 }
+h2 {
+  font-size: 30px;
+}
 h3 {
   font-size: 26px;
 }
@@ -140,6 +143,16 @@ span.red {
   color: #7D3A38;
   color: #D9534F;
   text-shadow: 0 0 3px black;
+}
+
+span.underline {
+  transition: all .2s;
+  border-bottom: 1px solid #fff;
+  padding-bottom: -10px;
+}
+
+span.underline:hover {
+  border-bottom: 3px solid #fff;
 }
 
 form * {
