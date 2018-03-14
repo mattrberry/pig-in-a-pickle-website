@@ -15,9 +15,9 @@
         <div class="imgNavText">&rarr;</div>
       </div>
     </div>
-    <h1><span class="center">Menus for 20 people or more...</span></h1>
-    <a id="pdf-menu" href="/static/catering/menu.pdf"><span class="center red">For Parties of 50 to 150+ click <span class="underline">here</span> for some menus and service options</span></a>
-    <h2><span class="center">Getting Married?</span></h2>
+    <h1><span class="center">See Menus Below for Parties of 20 to 50 people</span></h1>
+    <a id="pdf-menu" href="/static/catering/menu.pdf"><span class="center red">For Parties of 50 to 250, click <span class="underline">here</span> for menus and service options</span></a>
+    <h3><span class="center">Getting Married?</span></h3>
     <a id="pdf-wedding" href="/static/catering/wedding.pdf"><span class="center red">Click <span class="underline">Here</span> for Packages and Pricing</span></a>
     <div id="buffet-styles-container">
       <h1 id="buffet-header">Buffet Style</h1>
@@ -262,6 +262,9 @@ export default {
 }
 #pdf-menu, #pdf-wedding {
   font-size: 26px;
+}
+#pdf-menu span {
+  margin-bottom: 10px;
 }
 .imgNavText {
   position: absolute;
