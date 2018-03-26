@@ -4,7 +4,12 @@
     <h3><span class="center">Catering office hours Monday - Friday, 9am-4pm</span></h3>
     <h3><span class="center">Reach us at <a href="tel:4158918124"><span class="red">415-891-8124</span></a> or <a href="mailto:catering@piginapickle.com"><span class="red">catering@piginapickle.com</span></a></span></h3>
     <div class="images">
-      <img id="main">
+      <div id="img-container">
+        <img id="main"></img>
+        <div id="photo-credit">
+          <p>Photo Credit: Jade Turgel Photography</p>
+        </div>
+      </div>
       <div id="prevDiv" v-on:click="prev">
         <img id="prev">
         <div class="imgNavText">&larr;</div>
@@ -236,6 +241,19 @@ export default {
 .images {
   margin-top: 20px;
   margin-bottom: 10px;
+}
+#img-container {
+  position: relative;
+  color: white;
+  width: min-content;
+  margin: 10px auto;
+}
+#photo-credit p {
+  position: absolute;
+  bottom: 2px;
+  left: 4px;
+  font-size: 14px;
+  opacity: .9;
 }
 #main {
   display: block;
