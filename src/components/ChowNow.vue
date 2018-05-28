@@ -35,8 +35,8 @@ export default {
 #chownow {
   width: 550px;
   height: 100%;
-  float: left;
-  display: inline-block;
+  position: absolute;
+  left: 0;
 }
 #chownow-close {
   height: 100vh;
