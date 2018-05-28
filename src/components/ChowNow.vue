@@ -68,6 +68,10 @@ export default {
 }
 
 @media (max-width: 800px) {
+  #chownow-wrap {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
   #chownow {
     width: 90%;
   }
