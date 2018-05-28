@@ -1,6 +1,9 @@
 <template>
   <div id="chownow-component">
     <div id="chownow-wrap">
+      <div id="piap-header" v-on:click="toggleChowNow()">
+        <h3>&larr; Back to Pig in a Pickle</h3>
+      </div>
       <iframe src="https://ordering.chownow.com/order/9478/locations" id="chownow" frameBorder="0"></iframe>
       <div id="chownow-close" v-on:click="toggleChowNow()"></div>
     </div>
@@ -31,6 +34,17 @@ export default {
 }
 #chownow-wrap.open {
   transform: translateX(0%);
+}
+#piap-header {
+  background: #7D3A38;
+  width: 550px;
+  text-align: left;
+  cursor: pointer;
+}
+#piap-header h3 {
+  padding: 6px;
+  font-size: 22px;
+  margin: 0;
 }
 #chownow {
   width: 550px;
@@ -73,7 +87,7 @@ export default {
     -webkit-overflow-scrolling: touch;
   }
   #chownow {
-    width: 90%;
+    width: 100%;
   }
   #chownow-close {
     background-position: calc(100% - 10px) 10px;
