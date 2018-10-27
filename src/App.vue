@@ -10,7 +10,7 @@
       </div>
     </div>
     <ChowNowButton v-if="$route.path != '/catering'"></ChowNowButton>
-    <ChowNow></ChowNow>
+    <!-- <ChowNow></ChowNow> -->
   </div>
 </template>
 
@@ -40,7 +40,8 @@ export default {
       }
     }
     if (window.location.hash && window.location.hash === '#order') {
-      document.getElementById('chownow-toggle-label').click()
+      window.__cnOrderNow = true
+      // document.getElementById('chownow-toggle-label').click()
     }
   }
 }
