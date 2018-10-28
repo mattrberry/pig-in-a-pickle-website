@@ -2,8 +2,8 @@
   <div id="chownow-button">
     <!-- <label for="chownow-toggle" v-on:click="toggleChowNow()" id="chownow-toggle-label"></label> -->
     <!-- <input type="checkbox" id="chownow-toggle" /> -->
-    <!-- <a class="chownow-order-online" href="https://ordering.chownow.com/order/9478/locations" target="_blank">Order Now!</a> -->
-    <p class="chownow-order-online">Order Now!</p>
+    <a class="chownow-order-online" href="https://ordering.chownow.com/order/9478/locations" target="_blank">Order Now!</a>
+    <!-- <p class="chownow-order-online">Order Now!</p> -->
   </div>
 </template>
 
