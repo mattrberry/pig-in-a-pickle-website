@@ -117,7 +117,7 @@ export default {
                 },
                 {
                   label: '1 pound',
-                  value: '18'
+                  value: '20'
                 }
               ]
             },
@@ -140,7 +140,7 @@ export default {
               prices: [
                 {
                   label: 'Per Sandwich',
-                  value: '14'
+                  value: '15'
                 }
               ]
             },
@@ -187,7 +187,7 @@ export default {
               prices: [
                 {
                   label: 'Per Sandwich',
-                  value: '7'
+                  value: '8'
                 }
               ]
             },
@@ -245,7 +245,7 @@ export default {
                 },
                 {
                   label: 'Large (32oz)',
-                  value: '9'
+                  value: '10'
                 }
               ]
             },
@@ -262,7 +262,7 @@ export default {
                 },
                 {
                   label: 'Large (32oz)',
-                  value: '11'
+                  value: '12'
                 }
               ]
             },
@@ -396,7 +396,7 @@ export default {
               prices: [
                 {
                   label: 'Per Salad',
-                  value: '9'
+                  value: '9.50'
                 }
               ]
             },
@@ -405,7 +405,7 @@ export default {
               prices: [
                 {
                   label: 'Per Salad',
-                  value: '12'
+                  value: '12.50'
                 }
               ]
             },
@@ -414,7 +414,7 @@ export default {
               prices: [
                 {
                   label: 'Per Salad',
-                  value: '14'
+                  value: '14.50'
                 }
               ]
             },
@@ -423,7 +423,7 @@ export default {
               prices: [
                 {
                   label: 'Per Salad',
-                  value: '16'
+                  value: '16.50'
                 }
               ]
             }
