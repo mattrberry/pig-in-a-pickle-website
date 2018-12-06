@@ -4,16 +4,29 @@
     <label for="menu-toggle"></label>
     <input type="checkbox" id="menu-toggle" />
     <div id="menu-items">
-      <p class="menu-item" onclick="document.getElementById('menu-toggle').checked = false;" v-for="route in routes" :id="route.name">
+      <p class="menu-item" onclick="document.getElementById('menu-toggle').checked = false;" v-for="route in routes" :key="route.path" :id="route.name">
         <router-link v-bind:to="route.path">{{route.name}}</router-link>
       </p>
+      <ChowNowButton v-if="renderOrderButton" class="menu-item" id="chowNowButton"></ChowNowButton>
     </div>
   </div>
 </template>
 
 <script>
+import ChowNowButton from '../components/ChowNowButton.vue'
+
 export default {
   name: 'nav',
+  components: {
+    ChowNowButton
+  },
+  props: {
+    renderOrderButton: {
+      type: Boolean,
+      required: false,
+      default: true
+    }
+  },
   created () {
     this.$router.options.routes.forEach(route => {
       if (route.name === 'Events' || route.name === 'Success' || route.name === '404') {
@@ -25,6 +38,14 @@ export default {
       })
     })
   },
+  mounted: function () {
+    window.onscroll = function () {
+      console.log(window.document.documentElement.scrollTop)
+      if (window.document.scrollTop === 0) {
+        alert('top')
+      }
+    }
+  },
   data () {
     return {
       routes: []
@@ -34,6 +55,12 @@ export default {
 </script>
 
 <style scoped>
+#chowNowButton {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+}
+
 @media (min-width: 801px) {
   #menu-items {
     display: inline-block;
@@ -83,6 +110,12 @@ export default {
     width: 95%;
   }
 }
+@media (max-width: 1000px) {
+  #chowNowButton {
+    top: initial;
+    bottom: 8px;
+  }
+}
 
 #nav {
   background: #7D3A38;
@@ -95,7 +128,7 @@ export default {
   z-index: 1;
   font-size: 24px;
 }
-.menu-item, #nav-home {
+p.menu-item, #nav-home {
   margin: 0;
   padding: 2px 6px 2px 6px;
   text-decoration: none;
@@ -107,20 +140,20 @@ export default {
   font-size: 36px;
   display: inline-block;
 }
-#nav a {
+#nav a:not([target]) {
   text-decoration: none;
   color: #FFF;
 }
-#nav a:not(#nav-home) {
+#nav a:not(#nav-home):not([target]) {
   opacity: .5;
 }
-#nav a.router-link-exact-active:not(#nav-home) {
+#nav a.router-link-exact-active:not(#nav-home):not([target]) {
   opacity: 1;
 }
-#nav a:not(#nav-home):not(.router-link-exact-active):hover {
+#nav a:not(#nav-home):not(.router-link-exact-active):hover:not([target]) {
   animation: hover-on .3s forwards;
 }
-#nav a:not(#nav-home):not(.router-link-exact-active):not(:hover) {
+#nav a:not(#nav-home):not(.router-link-exact-active):not(:hover):not([target]) {
   animation: hover-off .3s forwards;
 }
 
