@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <Crossfade></Crossfade>
-    <AppNav></AppNav>
+    <AppNav
+      v-bind:renderOrderButton="$route.path !== '/catering'"
+    >
+    </AppNav>
     <div id="outer-container">
       <div id="inner-container">
         <transition name="fade">
@@ -9,58 +12,30 @@
         </transition>
       </div>
     </div>
-    <ChowNowButton v-if="$route.path != '/catering'"></ChowNowButton>
-    <ChowNow></ChowNow>
   </div>
 </template>
 
 <script>
 import AppNav from './components/AppNav.vue'
 import Crossfade from './components/Crossfade.vue'
-import ChowNow from './components/ChowNow.vue'
-import ChowNowButton from './components/ChowNowButton.vue'
 
 export default {
   name: 'app',
   components: {
     AppNav,
-    Crossfade,
-    ChowNow,
-    ChowNowButton
+    Crossfade
   },
   mounted: function () {
-    window.onhashchange = function () {
-      if (!window.location.hash) {
-        let iframe = document.getElementById('chownow-wrap')
-        let darken = document.getElementById('darken')
-        if (iframe.classList.contains('open')) {
-          iframe.classList.remove('open')
-          darken.classList.remove('dark')
-        }
-      }
-    }
     if (window.location.hash && window.location.hash === '#order') {
-      document.getElementById('chownow-toggle-label').click()
+      window.__cnOrderNow = true
     }
   }
 }
 </script>
 
 <style>
-#chownow-button {
-  position: fixed;
-  top: 0;
-  margin: 16px 10px;
-  right: 0;
-  z-index: 10;
-}
 
 @media (max-width: 1200px) {
-  #chownow-button {
-    bottom: 0;
-    top: auto;
-  }
-
   #outer-container {
     margin-bottom: 70px;
   }
