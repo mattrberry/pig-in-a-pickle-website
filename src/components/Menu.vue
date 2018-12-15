@@ -813,14 +813,6 @@ export default {
                     value: '3'
                   }
                 ]
-              },
-              {
-                name: 'Strawberry Lemonade',
-                prices: [
-                  {
-                    value: '3.50'
-                  }
-                ]
               }
             ]
           }
