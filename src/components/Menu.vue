@@ -390,7 +390,7 @@ export default {
               },
               {
                 name: 'To Go Sauces',
-                details: '2oz per 1/4lb of Meat is Included',
+                details: '2oz per 1/4lb of meat is included',
                 prices: [
                   {
                     label: '4oz',
@@ -752,7 +752,7 @@ export default {
               },
               {
                 name: 'To Go Sauces',
-                details: '2oz per 1/4lb of Meat is Included',
+                details: '2oz per 1/4lb of meat is included',
                 prices: [
                   {
                     label: '4oz',
