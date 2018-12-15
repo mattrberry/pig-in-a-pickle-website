@@ -3,7 +3,7 @@
     <h3 class="first-line"><span class="red">All our meats are Hormone & Antibiotic Free, Humanely Raised and Locally Sourced when possible, and are smoked with California White Oak.</span></h3>
     <LocationSwitcher>
       <div class="blocks" slot="Corte Madera">
-        <div v-for="block in locations.corteMadera" v-bind:id="block.name" class="block tab" :key='block.name'>
+        <div v-for="block in locations.corteMadera" v-bind:id="block.name" class="block tab" :key='"corteMadera:" + block.name'>
           <input v-bind:id="classAddTab(block.name)" type="checkbox" name="tabs" class="block-checkbox">
           <label v-bind:for="classAddTab(block.name)" class="block-name">{{block.name}}</label>
           <div class="tab-content item" v-for="item in block.items" :key='item.name'>
@@ -15,7 +15,7 @@
       </div>
 
       <div class="blocks" slot="Emeryville">
-        <div v-for="block in locations.emeryville" v-bind:id="block.name" class="block tab" :key='block.name'>
+        <div v-for="block in locations.emeryville" v-bind:id="block.name" class="block tab" :key='"emeryville:" + block.name'>
           <input v-bind:id="classAddTab(block.name)" type="checkbox" name="tabs" class="block-checkbox">
           <label v-bind:for="classAddTab(block.name)" class="block-name">{{block.name}}</label>
           <div class="tab-content item" v-for="item in block.items" :key='item.name'>
@@ -41,7 +41,7 @@
 import LocationSwitcher from './LocationSwitcher.vue'
 
 export default {
-  name: 'menu',
+  name: 'menus',
   components: {
     LocationSwitcher
   },
@@ -577,10 +577,45 @@ export default {
             items: [
               {
                 name: 'Beef Brisket',
+                details: 'Wet Rubbed & Smoked for 18 hours',
                 prices: [
                   {
-                    label: '1 pound',
-                    value: '28'
+                    value: '28 per lb.'
+                  }
+                ]
+              },
+              {
+                name: 'Pulled Pork',
+                details: 'Dry Rubbed Smoked Pork Shoulder',
+                prices: [
+                  {
+                    value: '18 per lb.'
+                  }
+                ]
+              },
+              {
+                name: 'Baby Back Ribs',
+                details: 'Dry Rubbed and Lightly Smoked',
+                prices: [
+                  {
+                    value: '15 per lb.'
+                  }
+                ]
+              },
+              {
+                name: 'Chicken',
+                details: 'Tossed in Alabama White Sauce',
+                prices: [
+                  {
+                    value: '11.75 per lb.'
+                  }
+                ]
+              },
+              {
+                name: 'House Made Hotlink',
+                prices: [
+                  {
+                    value: '7 each'
                   }
                 ]
               }
@@ -636,7 +671,7 @@ export default {
                   },
                   {
                     label: 'Large (32oz)',
-                    value: '12'
+                    value: '11'
                   }
                 ]
               },
@@ -726,6 +761,64 @@ export default {
                   {
                     label: 'Jar',
                     value: '7'
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            name: 'Salads',
+            items: [
+              {
+                name: 'House Salad',
+                details: 'Organic mixed baby greens with seasonal vegetables, pickled shallots, and house made croutons. Add your favorite House Smoked Meat to make it a meal',
+                prices: [
+                  {
+                    value: '9.50'
+                  }
+                ]
+              },
+              {
+                name: 'Pulled Chicken Salad',
+                details: 'Organic mixed baby greens with seasonal vegetables, pickled shallots, and house made croutons, topped with chilled smoked chicken',
+                prices: [
+                  {
+                    value: '12.50'
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            name: 'Desserts',
+            items: [
+              {
+                name: 'Butterscotch Pudding',
+                details: 'with whipped cream',
+                prices: [
+                  {
+                    value: '5'
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            name: 'Drinks',
+            items: [
+              {
+                name: 'Ice Tea, Sweet Tea, and Lemonade',
+                prices: [
+                  {
+                    value: '3'
+                  }
+                ]
+              },
+              {
+                name: 'Strawberry Lemonade',
+                prices: [
+                  {
+                    value: '3.50'
                   }
                 ]
               }

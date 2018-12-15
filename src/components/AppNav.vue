@@ -16,7 +16,7 @@
 import ChowNowButton from '../components/ChowNowButton.vue'
 
 export default {
-  name: 'nav',
+  name: 'appNav',
   components: {
     ChowNowButton
   },
@@ -37,14 +37,6 @@ export default {
         path: route.path
       })
     })
-  },
-  mounted: function () {
-    window.onscroll = function () {
-      console.log(window.document.documentElement.scrollTop)
-      if (window.document.scrollTop === 0) {
-        alert('top')
-      }
-    }
   },
   data () {
     return {

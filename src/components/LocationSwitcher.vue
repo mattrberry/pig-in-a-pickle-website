@@ -28,8 +28,6 @@ export default {
   },
   methods: {
     clickHandler: function (event) {
-      console.log(event)
-      console.log(event.target.textContent)
       this.location = event.target.textContent
     }
   }
@@ -53,6 +51,7 @@ export default {
     min-width: 20%;
     border-radius: 2px;
     transition: background .2s;
+    user-select: none;
 }
 .location-option.selected, .location-option:hover {
     background: rgba(255,255,255,.3);
