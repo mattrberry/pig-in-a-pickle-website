@@ -589,7 +589,7 @@ export default {
                 details: 'Dry Rubbed Smoked Pork Shoulder',
                 prices: [
                   {
-                    value: '18 per lb.'
+                    value: '20 per lb.'
                   }
                 ]
               },
@@ -671,7 +671,7 @@ export default {
                   },
                   {
                     label: 'Large (32oz)',
-                    value: '11'
+                    value: '12'
                   }
                 ]
               },
@@ -813,6 +813,26 @@ export default {
                     value: '3'
                   }
                 ]
+              },
+              {
+                name: 'Sprechers Root Beer',
+                details: 'Bottle',
+                prices: [
+                  {
+                    label: 'Per Bottle',
+                    value: '4'
+                  }
+                ]
+              },
+              {
+                name: 'Gingerale',
+                details: 'Bottle',
+                prices: [
+                  {
+                    label: 'Per Bottle',
+                    value: '4'
+                  }
+                ]
               }
             ]
           }
@@ -830,12 +850,6 @@ export default {
           url: 'http://www.brandtbeef.com/',
           product: 'Brisket',
           logo: '/static/vendors/brandt_beef.png'
-        },
-        {
-          name: 'Rancho Gordo',
-          url: 'https://www.ranchogordo.com/',
-          product: 'Piquinto Beans',
-          logo: '/static/vendors/rancho_gordo.png'
         },
         {
           name: 'Baia Pasta',
