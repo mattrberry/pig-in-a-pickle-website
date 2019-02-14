@@ -52,6 +52,9 @@ export default {
   top: 8px;
   right: 8px;
 }
+#chowNowButton[location="Emeryville"] {
+  display: none;
+}
 
 @media (min-width: 801px) {
   #menu-items {
