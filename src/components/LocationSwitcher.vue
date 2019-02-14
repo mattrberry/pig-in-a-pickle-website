@@ -18,6 +18,7 @@ export default {
   watch: {
     location (newLocation) {
       localStorage.location = newLocation
+      document.getElementById('chowNowButton').setAttribute('location', newLocation)
     }
   },
   data: function () {
