@@ -52,20 +52,4 @@ iframe {
   border: 2px solid #FFF;
   margin-bottom: 10px;
 }
-/* 
-@media (max-width: 800px) {
-  iframe {
-    background-image: url(/static/findus/map-small.png);
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
-@media (min-width: 801px) {
-  iframe {
-    background-image: url(/static/findus/map-large.png);
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-} */
 </style>
