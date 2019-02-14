@@ -2,14 +2,16 @@
   <div class="menu">
     <h3 class="first-line"><span class="red">All our meats are Hormone & Antibiotic Free, Humanely Raised and Locally Sourced when possible, and are smoked with California White Oak.</span></h3>
     <LocationSwitcher>
-      <div class="blocks" slot="Corte Madera">
-        <div v-for="block in locations.corteMadera" v-bind:id="block.name" class="block tab" :key='"corteMadera:" + block.name'>
-          <input v-bind:id="classAddTab(block.name)" type="checkbox" name="tabs" class="block-checkbox">
-          <label v-bind:for="classAddTab(block.name)" class="block-name">{{block.name}}</label>
-          <div class="tab-content item" v-for="item in block.items" :key='item.name'>
-            <h4 class="item-name">{{item.name}}<strong class="price" v-if="objSize(item.prices) == 1">{{item.prices[0].value}}</strong></h4>
-            <p class="item-details">{{item.details}}</p>
-            <p class="item-prices" v-if="objSize(item.prices) > 1" v-for="price in item.prices" :key='item.name + "-" + price.label + "-" + price.value'>{{price.label}}<strong class="price">{{price.value}}</strong></p>
+      <div slot="Corte Madera">
+        <div class="blocks">
+          <div v-for="block in locations.corteMadera" v-bind:id="block.name" class="block tab" :key='"corteMadera:" + block.name'>
+            <input v-bind:id="classAddTab(block.name)" type="checkbox" name="tabs" class="block-checkbox">
+            <label v-bind:for="classAddTab(block.name)" class="block-name">{{block.name}}</label>
+            <div class="tab-content item" v-for="item in block.items" :key='item.name'>
+              <h4 class="item-name">{{item.name}}<strong class="price" v-if="objSize(item.prices) == 1">{{item.prices[0].value}}</strong></h4>
+              <p class="item-details">{{item.details}}</p>
+              <p class="item-prices" v-if="objSize(item.prices) > 1" v-for="price in item.prices" :key='item.name + "-" + price.label + "-" + price.value'>{{price.label}}<strong class="price">{{price.value}}</strong></p>
+            </div>
           </div>
         </div>
       </div>
