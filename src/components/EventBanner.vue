@@ -14,36 +14,28 @@
 export default {
   name: 'event-banner',
   methods: {
-    formURL: function (id, key, time) {
-      return 'https://www.googleapis.com/calendar/v3/calendars/' +
-              id +
-              '/events?key=' +
-              key +
-              '&maxResults=1&orderBy=startTime&singleEvents=true&timeMin=' +
-              time
-    },
     listener: function (data) {
-      var parsed = JSON.parse(data.target.responseText)
-      if (parsed.items.length < 1) {
+      const parsed = JSON.parse(data.target.responseText)
+      if (parsed.length < 1) {
         return
       }
-      this.nextEvent.title = parsed.items[0].summary
+      this.nextEvent.title = parsed[0].summary
       try {
-        this.nextEvent.desc = parsed.items[0].description
+        this.nextEvent.desc = parsed[0].description
       } catch (e) {
         this.nextEvent.desc = ''
       }
-      this.nextEvent.head = this.daysDiffString(parsed.items[0].start.date)
+      this.nextEvent.head = this.daysDiffString(parsed[0].date)
     },
     getNextEvent: function () {
-      var req = new XMLHttpRequest()
-      req.addEventListener('load', this.listener)
-      req.open('GET', this.formURL(this.calendarID, this.key, this.date))
+      const req = new XMLHttpRequest()
+      req.addEventListener('load', this.listener.bind(req))
+      req.open('GET', 'https://piginapickle.com/upcoming_events')
       req.send()
     },
     daysDiffString: function (eventDate) {
       eventDate = new Date(eventDate + 'T12:00:00-08:00')
-      return 'Special Event on ' + eventDate.toDateString().substring(0, eventDate.toDateString().length - 5)
+      return 'Special Event on ' + eventDate.toLocaleString('en-us', {weekday: 'long', month: 'short', day: '2-digit'})
     }
   },
   data: function () {
@@ -52,10 +44,7 @@ export default {
         head: '',
         title: '',
         desc: ''
-      },
-      date: new Date().toISOString(),
-      key: 'AIzaSyD8Pqp0WEP8v-jNQuNto6TydWc8WyVlwfQ',
-      calendarID: 'info@piginapickle.com'
+      }
     }
   },
   mounted: function () {

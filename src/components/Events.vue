@@ -14,47 +14,34 @@
 export default {
   name: 'events',
   methods: {
-    formURL: function (id, key, time) {
-      return 'https://www.googleapis.com/calendar/v3/calendars/' +
-              id +
-              '/events?key=' +
-              key +
-              '&orderBy=startTime&singleEvents=true&timeMin=' +
-              time
-    },
     listener: function (data) {
-      var parsed = JSON.parse(data.target.responseText)
-      for (var idx = 0; idx < parsed.items.length; idx++) {
-        var event = {}
-        event.title = parsed.items[idx].summary
+      const parsed = JSON.parse(data.target.responseText)
+      for (let idx = 0; idx < parsed.length; idx++) {
+        const event = {}
+        event.title = parsed[idx].summary
         try {
-          event.desc = parsed.items[idx].description
+          event.desc = parsed[idx].description
         } catch (e) {
           event.desc = ''
         }
-        event.head = this.dateString(parsed.items[idx].start.date)
+        event.head = this.dateString(parsed[idx].date)
         this.events.push(event)
       }
     },
     getEvents: function () {
-      var req = new XMLHttpRequest()
+      const req = new XMLHttpRequest()
       req.addEventListener('load', this.listener)
-      req.open('GET', this.formURL(this.calendarID, this.key, this.date))
+      req.open('GET', 'https://piginapickle.com/upcoming_events')
       req.send()
     },
     dateString: function (eventDate) {
       eventDate = new Date(eventDate + 'T12:00:00-08:00')
       return eventDate.toLocaleString('en-us', {weekday: 'long', year: 'numeric', month: 'long', day: '2-digit'})
-      // return eventDate.toDateString().substring(0, eventDate.toDateString().length - 5)
-      // return 'Special Event on ' + eventDate.toDateString().substring(0, eventDate.toDateString().length - 5)
     }
   },
   data: function () {
     return {
-      events: [],
-      date: new Date().toISOString(),
-      key: 'AIzaSyD8Pqp0WEP8v-jNQuNto6TydWc8WyVlwfQ',
-      calendarID: 'info@piginapickle.com'
+      events: []
     }
   },
   mounted: function () {
